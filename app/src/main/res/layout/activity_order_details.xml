@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.silent.fiveghost.tourist.ui.activity.OrderDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:background="#2C3239"></RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="745px"
+                    android:background="#191F28"></RelativeLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_one_order_details"
+                android:layout_width="696px"
+                android:layout_height="550px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="618px">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30px"
+                        android:text="出行信息"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="593px"
+                        android:layout_height="185px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34px"
+                        android:background="@drawable/shape_rim"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="197px"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="出发时间"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="2px"
+                                android:layout_height="match_parent"
+                                android:background="#666"></View>
+
+                            <RelativeLayout
+                                android:layout_width="395px"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="2017-12-25(周二)"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="#666"></View>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="197px"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="结束时间"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="2px"
+                                android:layout_height="match_parent"
+                                android:background="#666"></View>
+
+                            <RelativeLayout
+                                android:layout_width="395px"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="2017-12-28(周五)"
+                                    android:textColor="#000"
+                                    android:textSize="20sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="593px"
+                        android:layout_height="82px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34px"
+                        android:background="@drawable/shape_rim">
+
+                        <RelativeLayout
+                            android:layout_width="197px"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="金额"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="2px"
+                            android:layout_height="match_parent"
+                            android:background="#666"></View>
+
+                        <RelativeLayout
+                            android:layout_width="395px"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="￥5800"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="593px"
+                        android:layout_height="72px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="34px">
+
+                        <RelativeLayout
+                            android:layout_width="273px"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shape_rim_two">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="成人: 2"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="273px"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shape_rim_two">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="儿童: 2"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_two_order_details"
+                android:layout_width="696px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_one_order_details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="34px">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30px"
+                        android:text="联系人信息"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="95px"
+                        android:layout_marginTop="40px"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="联系人姓名" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10px"
+                            android:text="张鹏 Zhang Peng"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="95px"
+                        android:layout_marginTop="45px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="联系电话" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1333 3596 615"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="65px"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="订单号码" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1333 3596 615"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="656px"
+                        android:layout_height="2px"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="57px"
+                        android:background="#666"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginLeft="95px"
+                        android:layout_marginTop="35px"
+                        android:text="2017-12-18 12:00:00" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_three_order_details"
+                android:layout_width="696px"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cv_two_order_details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40px">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="30px"
+                        android:text="出行人信息"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginTop="40px"
+                        android:layout_marginLeft="95px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="出行人信息"
+                              />
+                        <TextView
+                            android:textSize="20sp"
+                            android:textColor="#000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="张鹏 Zhang Peng"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="50px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="95px"
+                        android:layout_marginTop="45px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="联系电话" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1333 3596 615"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="65px"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="身份证号 " />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1333 3596 615"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="696px"
+                android:layout_height="80px"
+                android:layout_below="@id/cv_three_order_details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="45px"
+                android:layout_marginTop="45px">
+
+                <Button
+                    android:id="@+id/cancel_the_order"
+                    android:layout_width="190px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="113px"
+                    android:background="#ED5564"
+                    android:text="取消订单"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/change_orders_order"
+                    android:layout_width="350px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:layout_toRightOf="@id/cancel_the_order"
+                    android:background="#000"
+                    android:text="修改订单"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

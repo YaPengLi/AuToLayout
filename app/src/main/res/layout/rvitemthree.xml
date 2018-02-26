@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50px"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_moreroad_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_pic_categorie_line"
+            android:layout_width="3px"
+            android:layout_height="34px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44px"
+            android:background="@mipmap/pic_categorie_line" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12px"
+            android:layout_toRightOf="@id/iv_pic_categorie_line"
+            android:text="热门路线"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_rightarrow"
+            android:layout_width="12px"
+            android:layout_height="21px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@mipmap/btn_rightarrow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/line_one_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_one"
+                android:layout_width="335px"
+                android:layout_height="337px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="10px"
+                app:cardBackgroundColor="#D0D1D5"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:id="@+id/iv_rvitemthree_one"
+                         />
+                    <TextView
+                        android:id="@+id/tv_content_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="335px"
+                android:layout_height="531px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="20px"
+                app:cardBackgroundColor="#D0D1D5"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ic_launcher">
+
+                    <TextView
+                        android:id="@+id/tv_content_for"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="335px"
+                android:layout_height="531px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="30px"
+                app:cardBackgroundColor="#D0D1D5"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ic_launcher">
+
+                    <TextView
+                        android:id="@+id/tv_content_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="335px"
+                android:layout_height="337px"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="20px"
+                app:cardBackgroundColor="#D0D1D5"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/ic_launcher">
+
+                    <TextView
+                        android:id="@+id/tv_content_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

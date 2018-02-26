@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+
+                    <!--
+                    AppBarLayout里放入的都可以跟着向上滑动滑出布局的的，
+                    添加app:layout_scrollFlags="scroll"属性可以滑出布局
+                    TabLayout没有添加，所以停留在顶部
+                    -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="170px"
+                        android:background="#2C3238"
+                        app:layout_scrollFlags="scroll"
+                        >
+
+                        <android.support.v7.widget.SearchView
+                            android:id="@+id/sv_shtick"
+                            android:layout_width="594px"
+                            android:layout_height="50px"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_one"></android.support.v7.widget.SearchView>
+
+                        <ImageView
+                            android:id="@+id/iv_message_shtick"
+                            android:layout_width="33px"
+                            android:layout_height="26px"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="30px"
+                            android:src="@mipmap/btn_top_message" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab_shtick"
+                        android:layout_width="match_parent"
+                        android:layout_height="120px"
+                        android:background="#191F28"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="销量"
+                                android:textColor="#fff"
+                                android:textSize="20dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="收藏量"
+                                android:textColor="#fff"
+                                android:textSize="20dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="最新"
+                                android:textColor="#fff"
+                                android:textSize="20dp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/pic_oriented" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/spl_features"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ListView
+                            android:id="@+id/rv_shtick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                </RelativeLayout>
+</LinearLayout>

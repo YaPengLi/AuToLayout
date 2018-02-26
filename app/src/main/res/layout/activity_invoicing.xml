@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.silent.fiveghost.tourist.ui.activity.InvoicingActivity">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="175px"
+        android:background="#22272f">
+
+        <ImageView
+            android:id="@+id/invoicing_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/icon_back_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发票开取"
+            android:textColor="#fff"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:background="#191f28"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/invoicing_radio1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="电子发票"
+            android:textColor="@color/selector1" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="82px"
+            android:background="#3f454a" />
+
+        <RadioButton
+            android:id="@+id/invoicing_radio2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="纸质发票"
+            android:textColor="@color/selector1" />
+
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/invoicing_fragment"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent" />
+</com.zhy.autolayout.AutoLinearLayout>

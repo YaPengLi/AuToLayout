@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/isme_background_bg"
+    android:orientation="vertical">
+    <!--<个人中心>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="40px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个人中心"
+            android:textSize="24dp" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--<头像位置>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80px"
+                android:orientation="horizontal">
+
+                <myviews.RoundImageView
+                    android:id="@+id/img_title"
+                    android:layout_width="235px"
+                    android:layout_height="235px"
+                    android:layout_marginLeft="25px"
+                    android:src="@drawable/isme_imgtitle"
+                    app:type="round" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="53px"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:textSize="36px"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30px"
+                            android:layout_height="30px"
+                            android:src="@drawable/isme_wumen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6px"
+                            android:text="age"
+                            android:textSize="26px"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="30px"
+                            android:layout_height="30px"
+                            android:layout_marginLeft="28px"
+                            android:src="@drawable/isme_tubiao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="place" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--<收藏路线>-->
+            <LinearLayout
+                android:id="@+id/isme_collect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="65px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_one" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="1"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="收藏路线"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:layout_marginTop="10px"
+                android:background="#91918b" />
+            <!--<我的关注>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:layout_marginTop="10px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_two" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="2"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="我的关注"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+            <!--<常用旅客>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_thre" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="3"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="常用旅客"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+            <!--<浏览记录>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_four" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="4"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="浏览记录"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+            <!--<分享APP>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_five" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="5"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="分享APP"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+            <!--<设置>-->
+            <LinearLayout
+                android:id="@+id/isme_settings_six"
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_six" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="6"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="设置"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+            <!--<帮助中心>-->
+            <LinearLayout
+                android:id="@+id/isme_helpzx_seven"
+                android:layout_width="match_parent"
+                android:layout_height="145px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px">
+
+                    <ImageView
+                        android:layout_width="90px"
+                        android:layout_height="90px"
+                        android:src="@drawable/isme_seven" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal"
+                        android:text="7"
+                        android:textSize="38px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31px"
+                    android:text="帮助中心"
+                    android:textColor="#ffffff"
+                    android:textSize="34px" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <ImageView
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:layout_marginRight="38px"
+                    android:src="@drawable/right_button" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="2px"
+                android:layout_marginLeft="75px"
+                android:background="#91918b" />
+
+            <View
+                android:layout_width="650px"
+                android:layout_height="180px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

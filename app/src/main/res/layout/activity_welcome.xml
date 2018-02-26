@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.silent.fiveghost.tourist.ui.activity.WelcomeActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="75px"
+        android:layout_height="10px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130px"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="10px"
+            android:layout_height="10px"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_dian"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="10px"
+            android:layout_height="10px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/selector_dian"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="10px"
+            android:layout_height="10px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/selector_dian"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="10px"
+            android:layout_height="10px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/selector_dian"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/bu_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130px"
+        android:background="#fff"
+        android:text="点击进入首页" />
+</RelativeLayout>

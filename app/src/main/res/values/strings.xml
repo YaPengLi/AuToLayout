@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AuToLayout</string>
+    <string name="zhucexieyi"><b>新用户？立即注册</b></string>
+    <string name="xieyi"><b>用户服务协议</b></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

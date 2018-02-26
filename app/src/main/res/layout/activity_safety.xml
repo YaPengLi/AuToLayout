@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.silent.fiveghost.tourist.ui.activity.SettingActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="88px"
+        android:background="#817d81" />
+    <!--《标题》-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back_settings"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:src="@drawable/isme_back_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="账号安全"
+            android:textSize="34px"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="88px"
+            android:background="#817d81" />
+    </RelativeLayout>
+    <!--<手机号>-->
+    <LinearLayout
+        android:id="@+id/safety_phone"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50px"
+            android:gravity="center_vertical"
+            android:text="手机号"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="60px"
+            android:src="@drawable/isme_right_button" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#817d81" />
+    <!--<修改密码>-->
+    <LinearLayout
+        android:id="@+id/safety_uppassword"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50px"
+            android:gravity="center_vertical"
+            android:text="修改密码"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="60px"
+            android:src="@drawable/isme_right_button" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#817d81" />
+
+</LinearLayout>

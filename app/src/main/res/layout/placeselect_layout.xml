@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--《标题》-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+
+        android:background="#34393F">
+
+        <ImageView
+            android:id="@+id/back_settings_finsh"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:src="@drawable/left_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="地区选择"
+            android:textColor="#ffffff"
+            android:textSize="34px"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#373D4B" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#232730"
+        android:orientation="vertical">
+        <!--<地点检索>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90px"
+            android:layout_marginTop="45px"
+            android:text="地点检索"
+            android:textColor="#AAABAF"
+            android:textSize="34px" />
+
+        <!--<输入框>-->
+        <EditText
+            android:layout_width="570px"
+            android:layout_height="65px"
+            android:layout_marginLeft="90px"
+            android:layout_marginTop="45px"
+            android:background="@null"
+            android:drawableBottom="@drawable/shape_placeselect"
+            android:drawableRight="@drawable/pleceselect_img"
+            android:hint="Kun Ming"
+            android:textColorHint="#fff"
+            android:textColor="#ffffff" />
+        <!--<国家>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65px"
+            android:layout_marginTop="80px"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="65px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="90px"
+                android:background="@drawable/shape_select_one" />
+
+            <Button
+                android:layout_width="195px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-19px"
+                android:background="@drawable/shape_select_two"
+                android:text="中国"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+        <!--<省市级>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65px"
+            android:layout_marginTop="35px"
+            android:orientation="horizontal">
+            <!--<市级>-->
+            <ImageButton
+                android:layout_width="65px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="90px"
+                android:background="@drawable/shape_select_one" />
+
+            <Button
+                android:layout_width="195px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-19px"
+                android:background="@drawable/shape_select_two"
+                android:text="市级选择"
+                android:textColor="#ffffff" />
+            <!--<省级>-->
+            <ImageButton
+                android:layout_width="65px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30px"
+                android:background="@drawable/shape_select_one" />
+
+            <Button
+                android:layout_width="195px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-19px"
+                android:background="@drawable/shape_select_two"
+                android:text="省级选择"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:text="确定"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="36px"
+                android:layout_alignParentBottom="true"
+                android:background="#00C897" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

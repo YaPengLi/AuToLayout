@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#34393F">
+        <SearchView
+            android:id="@+id/search_view_shtick"
+            android:layout_width="590px"
+            android:layout_height="50px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_two"
+            android:iconifiedByDefault="true"
+            android:imeOptions="actionSearch" />
+        <ImageView
+            android:id="@+id/iv_message_shtick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px"
+            android:src="@drawable/btn_top_message" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="121px"
+        android:background="#232730"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tv_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:drawableRight="@mipmap/pic_arrow"
+                android:gravity="center"
+                android:text="销量"
+                android:textColor="#fff" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_cv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="收藏量"
+            android:textColor="#fff" />
+        <TextView
+            android:id="@+id/tv_latest"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="#fff" />
+
+        <ImageView
+            android:id="@+id/iv_kunming"
+            android:layout_width="90px"
+            android:layout_height="30px"
+            android:layout_gravity="center"
+            android:layout_marginRight="40px"
+            android:src="@mipmap/pic_oriented" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_shtick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+</LinearLayout>

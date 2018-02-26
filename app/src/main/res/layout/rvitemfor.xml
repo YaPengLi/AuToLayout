@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50px"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_guidestyle_for"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     >
+
+        <ImageView
+            android:id="@+id/iv_pic_categorie_line_for"
+            android:layout_width="3px"
+            android:layout_height="34px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44px"
+            android:background="@mipmap/pic_categorie_line" />
+
+        <TextView
+            android:id="@+id/tv_title_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_pic_categorie_line_for"
+            android:paddingLeft="12px"
+            android:text="导游风采"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_rightarrow_for"
+            android:layout_width="12px"
+            android:layout_height="21px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@mipmap/btn_rightarrow" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_suggect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30px"></ListView>
+</LinearLayout>

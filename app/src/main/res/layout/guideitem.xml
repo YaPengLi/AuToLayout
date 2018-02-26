@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="15px"
+        android:background="@mipmap/tourists_tuijian_list_bg_normal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="666px"
+        android:layout_height="240px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/iv_item_card"
+                android:layout_width="200px"
+                android:layout_height="200px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                />
+
+            <TextView
+                android:id="@+id/tv_content_card_for"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="30px"
+                android:layout_toRightOf="@id/iv_item_card"
+                android:text="haha"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_guide_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_content_card_for"
+                android:layout_marginLeft="24px"
+                android:layout_marginTop="27px"
+                android:layout_toRightOf="@id/iv_item_card"
+                android:text="擅长路线" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20px"
+                android:layout_marginRight="35px">
+
+                <ImageView
+                    android:id="@+id/iv_star_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_star_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_star_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_star_for"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star_selector" />
+
+                <ImageView
+                    android:id="@+id/iv_star_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/star_selector" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88px"
+    android:layout_marginTop="40px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_back_all"
+            android:layout_width="17px"
+            android:layout_height="31px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:src="@mipmap/top_back_left" />
+
+        <TextView
+            android:id="@+id/tv_title_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="#000"
+            android:textSize="36px"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_message_all"
+            android:layout_width="33px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@mipmap/top_icon_message" />
+    </RelativeLayout>
+</RelativeLayout>

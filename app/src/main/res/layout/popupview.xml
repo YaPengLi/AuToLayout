@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="295px"
+    android:layout_height="385px"
+    android:background="@mipmap/popup_bg2x"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/pop_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="20px"
+        android:src="@mipmap/btn_close2x" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80px"
+        android:gravity="center_horizontal"
+        android:text="忘记密码"
+        android:textColor="#000"
+        android:textSize="60px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="45px"
+        android:text="用 户 名："
+        android:textColor="#000"
+        android:textSize="32px" />
+
+    <EditText
+        android:id="@+id/pop_phone"
+        android:layout_width="394px"
+        android:layout_height="61px"
+        android:layout_gravity="center"
+        android:layout_marginTop="13px"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:hint="注册所用手机号"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:text="新 密 码 ："
+        android:textColor="#000"
+        android:textSize="32px" />
+
+    <EditText
+        android:id="@+id/pop_password"
+        android:layout_width="394px"
+        android:layout_height="61px"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:layout_marginTop="13px"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:hint="请输入密码" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:text="验 证 码 ："
+        android:textColor="#000"
+        android:textSize="32px" />
+
+    <EditText
+        android:id="@+id/pop_code"
+        android:layout_width="394px"
+        android:layout_height="61px"
+        android:layout_gravity="center"
+        android:layout_marginTop="13px"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="请输入验证码" />
+
+    <Button
+        android:id="@+id/pop_btn"
+        android:layout_width="460px"
+        android:layout_height="80px"
+        android:layout_gravity="center"
+        android:layout_marginTop="40px"
+        android:background="@drawable/btn_shape"
+        android:text="获 取 验 证 码"
+        android:textColor="#fff"
+        android:textSize="40px"
+        android:textStyle="bold" />
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.silent.fiveghost.tourist">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <application
+        android:name=".app.MyAppLication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1334" />
+
+        <activity android:name=".ui.activity.WelcomeActivity" />
+        <activity android:name=".ui.activity.HomeActivity" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.MessageActivity" />
+        <activity android:name=".ui.activity.GuideStyleActivity" />
+        <activity android:name=".ui.activity.GuideDetailActivity" />
+        <activity android:name=".ui.activity.RoadDetailsActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.rSafetyActivity" />
+        <activity android:name=".ui.activity.PhoneActivity" />
+        <activity android:name=".ui.activity.PasswordActivity" />
+        <activity android:name=".ui.activity.HelpCenterActivity" />
+        <activity android:name=".ui.activity.One_stop_releaseActivity" />
+        <activity android:name=".ui.activity.Sub_station_releaseActivity" />
+        <activity android:name=".ui.activity.InvoicingActivity" />
+        <activity android:name=".ui.activity.CollectActivity"></activity>
+        <activity android:name=".ui.activity.OrderDetailsActivity" />
+        <activity android:name=".ui.activity.OrderContentActivity"></activity>
+    </application>
+
+</manifest>
