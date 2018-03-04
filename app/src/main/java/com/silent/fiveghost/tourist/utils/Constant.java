@@ -144,11 +144,11 @@ public class Constant {
                 //                                          int[] grantResults)
                 // to handle the case where the user grants the permission. See the documentation
                 // for ActivityCompat#requestPermissions for more details.
-                return "cuo";
+                return "";
             }
             return telephonyManager.getDeviceId();
         } else {
-            return "cuo";
+            return "";
         }
     }
 }

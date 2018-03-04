@@ -232,9 +232,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         Map<String, String> map = Constant.getMap();
         map.put("tel", yhm);
         map.put("password", mm);
+        map.put("category", "2");
         presenter.DoRequest(UrlUtils.LOGIN_URL, map);
-
-
     }
 
     private void popSubmit() {
@@ -258,7 +257,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         }
         IPresenter presenter = new IPresenter(new IView<ForgetBean>() {
 
-
             @Override
             public void success(ForgetBean forgetBean) {
                 if (forgetBean.getErrcode() == 1) {
@@ -279,7 +277,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         map.put("password", password);
         map.put("code", code);
         presenter.DoRequest(UrlUtils.FORGET_URL, map);
-
 
     }
 }

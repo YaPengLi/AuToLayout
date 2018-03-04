@@ -1,15 +1,20 @@
 package com.silent.fiveghost.tourist.ui;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.silent.fiveghost.tourist.listener.OnBooleanListener;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.Stack;
@@ -22,6 +27,9 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     private long lastClickTime;
     /** 按钮连续点击最低间隔时间 单位：毫秒 **/
     public final static int CLICK_TIME = 500;
+
+    private OnBooleanListener onPermissionListener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -118,6 +126,51 @@ public abstract class BaseActivity extends AutoLayoutActivity {
             Activity activity = listActivity.pop();
             activity.finish();
         }
+    }
+
+    /*
+    *
+    * */
+    /**
+     * 权限请求
+     * @param permission Manifest.permission.CAMERA
+     * @param onBooleanListener 权限请求结果回调，true-通过  false-拒绝
+     */
+    public void permissionRequests(String permission, OnBooleanListener onBooleanListener){
+        onPermissionListener=onBooleanListener;
+        if (ContextCompat.checkSelfPermission(this, permission)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.READ_CONTACTS)) {
+                //权限已有
+                onPermissionListener.onClick(true);
+            } else {
+                //没有权限，申请一下
+                ActivityCompat.requestPermissions(this,
+                        new String[]{permission},
+                        1);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                //权限通过
+                if(onPermissionListener!=null){
+                    onPermissionListener.onClick(true);
+                }
+            } else {
+                //权限拒绝
+                if(onPermissionListener!=null){
+                    onPermissionListener.onClick(false);
+                }
+            }
+            return;
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
     /**

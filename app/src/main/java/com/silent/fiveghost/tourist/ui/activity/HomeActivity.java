@@ -47,7 +47,6 @@ public class HomeActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         setContentView(R.layout.activity_home);
         StatusBarUtil.StatusBarLightMode(HomeActivity.this, 1);
         ButterKnife.bind(this);
-
         List<Fragment> fragmentList = new ArrayList<>();
         RecommendFragment recommendFragment = new RecommendFragment();
         FeaturesFragment featuresFragment = new FeaturesFragment();

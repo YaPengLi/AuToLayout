@@ -1,5 +1,6 @@
 package com.silent.fiveghost.tourist.ui.activity;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.bean.RegistBean;
 import com.silent.fiveghost.tourist.bean.VerificationCodeBean;
+import com.silent.fiveghost.tourist.listener.OnBooleanListener;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseActivity;
 import com.silent.fiveghost.tourist.utils.Constant;
@@ -32,8 +34,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private EditText register_password_one;//密码
     private EditText register_password_two;//再次确认密码
     private Button register_btn;//获取验证码
+    private Button submit_btn;//获取验证码
     private Map<String, String> map;
     int a = 1;
+    String imei = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +69,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 return false;
             }
         });
+        submit_btn = findViewById(R.id.submit_btn);
         register_btn = (Button) findViewById(R.id.register_btn);
         register_mReturn.setOnClickListener(this);
+        submit_btn.setOnClickListener(this);
         register_btn.setOnClickListener(this);
         map = new HashMap<>();
     }
@@ -85,9 +91,22 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     showToast("手机号为空");
                     return;
                 }
+
+                permissionRequests(Manifest.permission.READ_PHONE_STATE, new OnBooleanListener() {
+                    @Override
+                    public void onClick(boolean bln) {
+                        if(bln){
+                            showToast("权限通过");
+
+                        }else{
+                            showToast("权限拒绝");
+                        }
+                    }
+                });
+
                     map.put("mobile", trim);
                     map.put("module", "1");
-                    map.put("imei", Constant.getPhoneIMEI(RegisterActivity.this));
+                    map.put("imei", Constant.getPhoneIMEI(this));
                     IPresenter presenter = new IPresenter(new IView<VerificationCodeBean>() {
 
                         @Override
@@ -96,7 +115,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                             Log.e("TAG", "获取验证码:" + verificationCodeBean.getErrcode());
                             if (verificationCodeBean.getErrcode() == 1) {
                                 ;
-                                register_btn.setText("注册");
+//                                register_btn.setText("注册");
                             } else {
                                 Toast.makeText(RegisterActivity.this, verificationCodeBean.getErrmsg(), Toast.LENGTH_SHORT).show();
                             }
@@ -104,13 +123,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
                         @Override
                         public void defeat(String s) {
-
+                            Log.e("defeat", "" + s);
                         }
                     });
                     presenter.DoRequest(UrlUtils.YZM_URL, map);
-
-
-
 //                  else {
 //
 //                    submit();
@@ -118,7 +134,12 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
 
                 break;
+        case R.id.submit_btn:
+            submit();
+
+            break;
         }
+
     }
 
     private void submit() {
