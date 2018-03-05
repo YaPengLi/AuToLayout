@@ -25,3 +25,12 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+    minSdkVersion = 18
+    targetSdkVersion = 26
+    targetCompatibility = 1.7
+    sourceCompatibility = 1.7
+    androidSupport='26.0.0'
+}
