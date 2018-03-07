@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.silent.fiveghost.tourist.ui.activity.Sub_station_releaseActivity">
+    tools:context="com.silent.fiveghost.tourist.ui.activity.SubStationReleaseActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

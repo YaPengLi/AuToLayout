@@ -14,7 +14,7 @@ import com.silent.fiveghost.tourist.R;
  * A simple {@link Fragment} subclass.
  * 纸质发票
  */
-public class Paper_invoiceFragment extends Fragment {
+public class PaperInvoiceFragment extends Fragment {
 
 
     @Override

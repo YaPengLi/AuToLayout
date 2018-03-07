@@ -94,8 +94,6 @@ public class HomeActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         mRadioGroup.setOnCheckedChangeListener(this);
     }
 
-
-
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         //获取当前容器内部有多少个子控件

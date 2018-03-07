@@ -35,7 +35,7 @@
                 android:layout_marginTop="80px"
                 android:orientation="horizontal">
 
-                <myviews.RoundImageView
+                <com.silent.fiveghost.tourist.view.RoundImageView
                     android:id="@+id/img_title"
                     android:layout_width="235px"
                     android:layout_height="235px"

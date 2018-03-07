@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.silent.fiveghost.tourist.ui.activity.One_stop_releaseActivity">
+    tools:context="com.silent.fiveghost.tourist.ui.activity.OneStopReleaseActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

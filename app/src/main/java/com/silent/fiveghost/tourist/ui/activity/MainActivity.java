@@ -23,10 +23,9 @@ public class MainActivity extends BaseActivity {
             @Override
             public void run() {
                 startActivity(WelcomeActivity.class);
+
                 finish();
             }
-        }, 3000);
-
-
+        }, 1000);
     }
 }

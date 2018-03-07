@@ -43,8 +43,8 @@ public class ReleaseItineraryFragment extends Fragment implements View.OnClickLi
 
     private FragmentManager msg;
     private FragmentTransaction transaction;
-    private One_stop_releaseFragment one_stop_releaseFragment;
-    private Sub_station_releaseFragment sub_station_releaseFragment;
+    private OneStopReleaseFragment one_stop_releaseFragment;
+    private SubStationReleaseFragment sub_station_releaseFragment;
 
     @Nullable
     @Override
@@ -54,7 +54,7 @@ public class ReleaseItineraryFragment extends Fragment implements View.OnClickLi
         unbinder = ButterKnife.bind(this, view);
         //判断home_pager是否为null
         if (one_stop_releaseFragment == null) {
-            one_stop_releaseFragment = new One_stop_releaseFragment();
+            one_stop_releaseFragment = new OneStopReleaseFragment();
 //            //设置首页默认被选中
             releaseitineraryRadio1.setChecked(true);
         }
@@ -72,7 +72,7 @@ public class ReleaseItineraryFragment extends Fragment implements View.OnClickLi
         //开启Fragment事物
         transaction = msg.beginTransaction();
 
-        one_stop_releaseFragment = new One_stop_releaseFragment();
+        one_stop_releaseFragment = new OneStopReleaseFragment();
         transaction.add(R.id.releaseitinerary_fragment, one_stop_releaseFragment);
         transaction.commit();
     }
@@ -95,7 +95,7 @@ public class ReleaseItineraryFragment extends Fragment implements View.OnClickLi
                 break;
             case R.id.releaseitinerary_radio1:
                 if (one_stop_releaseFragment == null) {
-                    one_stop_releaseFragment = new One_stop_releaseFragment();
+                    one_stop_releaseFragment = new OneStopReleaseFragment();
                     transaction.add(R.id.releaseitinerary_fragment, this.one_stop_releaseFragment);
                 } else {
                     transaction.show(one_stop_releaseFragment);
@@ -104,7 +104,7 @@ public class ReleaseItineraryFragment extends Fragment implements View.OnClickLi
             case R.id.releaseitinerary_radio2:
                 if (sub_station_releaseFragment == null) {
 
-                    sub_station_releaseFragment = new Sub_station_releaseFragment();
+                    sub_station_releaseFragment = new SubStationReleaseFragment();
                     transaction.add(R.id.releaseitinerary_fragment, this.sub_station_releaseFragment);
                 } else {
 

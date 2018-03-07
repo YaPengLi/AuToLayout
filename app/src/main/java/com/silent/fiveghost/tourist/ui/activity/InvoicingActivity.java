@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 
 import com.silent.fiveghost.tourist.ui.fragment.Electronic_invoiceFragment;
-import com.silent.fiveghost.tourist.ui.fragment.Paper_invoiceFragment;
+import com.silent.fiveghost.tourist.ui.fragment.PaperInvoiceFragment;
 import com.silent.fiveghost.tourist.R;
 
 //发票开取
@@ -23,7 +23,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
     private FragmentManager msg;
     private FragmentTransaction transaction;
     private Electronic_invoiceFragment electronic_invoiceFragment;
-    private Paper_invoiceFragment paper_invoiceFragment;
+    private PaperInvoiceFragment paper_invoiceFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +79,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.invoicing_radio2:
                 if ( paper_invoiceFragment== null) {
-                    paper_invoiceFragment = new Paper_invoiceFragment();
+                    paper_invoiceFragment = new PaperInvoiceFragment();
                     transaction.add(R.id.invoicing_fragment, this.paper_invoiceFragment);
                 } else {
                     transaction.show(paper_invoiceFragment);

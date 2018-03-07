@@ -9,7 +9,7 @@ import com.silent.fiveghost.tourist.ui.BaseActivity;
 /*
 *  一站式
 * */
-public class One_stop_releaseActivity extends BaseActivity {
+public class OneStopReleaseActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

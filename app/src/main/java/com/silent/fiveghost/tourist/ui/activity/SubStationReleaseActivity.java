@@ -9,7 +9,7 @@ import com.silent.fiveghost.tourist.ui.BaseActivity;
 /*
 * 分站式发布
 * */
-public class Sub_station_releaseActivity extends BaseActivity {
+public class SubStationReleaseActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,4 +1,4 @@
-package myviews;
+package com.silent.fiveghost.tourist.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
