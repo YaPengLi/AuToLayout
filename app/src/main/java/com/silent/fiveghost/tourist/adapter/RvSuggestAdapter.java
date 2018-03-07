@@ -34,7 +34,8 @@ import java.util.List;
  * 也不做平淡生活里委曲求全的谁
  */
 
-public class RvSuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class
+RvSuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private Context context;
     private List<String> strings;
     private List<HomeBean.DataBean.AdvertBean> advert;
@@ -233,9 +234,9 @@ public class RvSuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             if (convertView == null) {
                 holder = new ViewHolder();
                 convertView = LayoutInflater.from(context).inflate(R.layout.guideitem, parent, false);
-                holder.tv_daoyou = convertView.findViewById(R.id.tv_content_card_for);
-                holder.iv_item_card = convertView.findViewById(R.id.iv_item_card);
-                holder.tv_content=convertView.findViewById(R.id.tv_guide_like);
+//                holder.tv_daoyou = convertView.findViewById(R.id.tv_content_card_for);
+//                holder.iv_item_card = convertView.findViewById(R.id.iv_item_card);
+//                holder.tv_content=convertView.findViewById(R.id.tv_guide_like);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();

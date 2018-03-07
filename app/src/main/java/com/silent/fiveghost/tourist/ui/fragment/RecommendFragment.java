@@ -3,7 +3,10 @@ package com.silent.fiveghost.tourist.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +16,23 @@ import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
+import com.silent.fiveghost.tourist.adapter.RecommendGuideAdapter;
+import com.silent.fiveghost.tourist.bean.HomeBean;
+import com.silent.fiveghost.tourist.manager.FullyLinearLayoutManager;
+import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseFragment;
+import com.silent.fiveghost.tourist.utils.UrlUtils;
+import com.silent.fiveghost.tourist.view.IView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * @author FunChen
@@ -28,7 +42,7 @@ import butterknife.ButterKnife;
  * <p>
  * ${TAGS}
  */
-public class RecommendFragment extends BaseFragment implements View.OnClickListener {
+public class RecommendFragment extends BaseFragment implements View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
 	@BindView(R.id.iv_message_recommend)
 	ImageView ivMessageRecommend;
@@ -74,28 +88,37 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	SwipeRefreshLayout swipe;
 	@BindView(R.id.fb_recommend_banner)
 	FlyBanner fbRecommendBanner;
+	@BindView(R.id.cv)
+	CardView cv;
+
+	private List<HomeBean.DataBean.AdvertBean> advert;
+	private List<HomeBean.DataBean.RouteBean> route;
+	private List<HomeBean.DataBean.GuideBean> guide;
+
+	private Unbinder unbinder;
 
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_recommend, container, false);
-		ButterKnife.bind(getActivity());
+		unbinder = ButterKnife.bind(this, view);
 
 		initView(view);
 		initData();
 
 
-		ButterKnife.bind(this, view);
 		return view;
 	}
 
 	private void initView(View view) {
-
+		swipe.setOnRefreshListener(this);
+		FullyLinearLayoutManager manager = new FullyLinearLayoutManager(getActivity());
+		lvRecommendGuide.setLayoutManager(manager);
 
 	}
 
 	private void initData() {
-
+		getData();
 	}
 
 	@Override
@@ -103,4 +126,67 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 	}
 
+	private void getData() {
+		IPresenter presenter = new IPresenter(new IView<HomeBean>() {
+
+			@Override
+			public void success(HomeBean homeBean) {
+				swipe.setRefreshing(false);
+				swipe.setEnabled(true);
+
+				onSuccess(homeBean);
+			}
+
+			@Override
+			public void defeat(String s) {
+				swipe.setRefreshing(false);
+				swipe.setEnabled(true);
+				Log.e("HomeActivity", s);
+			}
+		});
+		//http://120.79.137.110:83/api/v1/home/tourist-index
+		presenter.DoGet(UrlUtils.HOME_URL);
+	}
+
+	//请求成功后数据渲染
+	private void onSuccess(HomeBean homeBean) {
+		if (homeBean.getData() != null) {
+			if (homeBean.getData().getAdvert() != null) {
+				List<String> url = new ArrayList<>();
+				for (HomeBean.DataBean.AdvertBean abv : homeBean.getData().getAdvert()) {
+					url.add(abv.getImg());
+				}
+				fbRecommendBanner.setImagesUrl(url);
+			}
+			//热门线路
+			if (homeBean.getData().getRoute() != null) {
+				homeBean.getData().getRoute().size();
+				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(0) == null ? "" : homeBean.getData().getRoute().get(0).getImg()).into(ivRecommendHotPathImgOne);
+				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(1) == null ? "" : homeBean.getData().getRoute().get(1).getImg()).into(ivRecommendHotPathImgTwo);
+				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(2) == null ? "" : homeBean.getData().getRoute().get(2).getImg()).into(ivRecommendHotPathImgThree);
+				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(3) == null ? "" : homeBean.getData().getRoute().get(3).getImg()).into(ivRecommendHotPathImgFour);
+			}
+//			导游风采
+			if (homeBean.getData().getGuide() != null) {
+				Log.e("-----" , "=====" + homeBean.getData().getGuide().size());
+				RecommendGuideAdapter GuideAdapter = new RecommendGuideAdapter(getActivity(), homeBean.getData().getGuide());
+				lvRecommendGuide.setAdapter(GuideAdapter);
+			}
+		} else {
+			showToast("数据加载失败！");
+		}
+	}
+
+
+	@Override
+	public void onRefresh() {
+		pageCurrent = 1;
+		getData();
+	}
+
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		unbinder.unbind();
+	}
 }

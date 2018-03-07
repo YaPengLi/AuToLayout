@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
-        android:layout_marginTop="15px"
-        android:background="@mipmap/tourists_tuijian_list_bg_normal"
+        android:layout_width="330dp"
+        android:layout_height="120dp"
         android:layout_centerHorizontal="true"
-        android:layout_width="666px"
-        android:layout_height="240px"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/tourists_tuijian_list_bg_normal"
         app:cardCornerRadius="16dp"
         app:cardElevation="16dp">
 
@@ -21,75 +22,74 @@
             >
 
             <ImageView
-                android:id="@+id/iv_item_card"
-                android:layout_width="200px"
-                android:layout_height="200px"
+                android:id="@+id/iv_recommend_guide_item_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="20px"
+                android:layout_marginLeft="10dp"
                 />
 
             <TextView
-                android:id="@+id/tv_content_card_for"
+                android:id="@+id/tv_recommend_guide_item_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="24px"
-                android:layout_marginTop="30px"
-                android:layout_toRightOf="@id/iv_item_card"
-                android:text="haha"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/iv_recommend_guide_item_img"
+                android:ellipsize="end"
+                android:singleLine="true"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/tv_guide_like"
+                android:id="@+id/tv_recommend_guide_item_preference"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_content_card_for"
-                android:layout_marginLeft="24px"
-                android:layout_marginTop="27px"
-                android:layout_toRightOf="@id/iv_item_card"
-                android:text="擅长路线" />
+                android:layout_below="@id/tv_recommend_guide_item_title"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_toRightOf="@id/iv_recommend_guide_item_img"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginBottom="20px"
-                android:layout_marginRight="35px">
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/iv_star_one"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/star_selector" />
+                    android:id="@+id/iv_recommend_guide_item_star_one"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/star_selector"/>
 
                 <ImageView
-                    android:id="@+id/iv_star_two"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/star_selector" />
+                    android:id="@+id/iv_recommend_guide_item_star_two"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/star_selector"/>
 
                 <ImageView
-                    android:id="@+id/iv_star_three"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/star_selector" />
+                    android:id="@+id/iv_recommend_guide_item_star_three"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/star_selector"/>
 
                 <ImageView
-                    android:id="@+id/iv_star_for"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/star_selector" />
+                    android:id="@+id/iv_recommend_guide_item_star_four"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/star_selector"/>
 
                 <ImageView
-                    android:id="@+id/iv_star_five"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/star_selector" />
+                    android:id="@+id/iv_recommend_guide_item_star_five"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/star_selector"/>
             </LinearLayout>
         </RelativeLayout>
-
 
     </android.support.v7.widget.CardView>
 </RelativeLayout>
