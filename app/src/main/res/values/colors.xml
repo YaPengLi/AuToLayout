@@ -9,4 +9,8 @@
     <color name="hui">#8b8c8e</color>
     <color name="check">#00cd98</color>
     <color name="nocheck">#9a9a9a</color>
+
+
+    <color name="color_white">#ffffff</color>
+
 </resources>

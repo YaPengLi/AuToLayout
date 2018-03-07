@@ -6,5 +6,5 @@
     <com.recker.flybanner.FlyBanner
         android:id="@+id/fl_banner_one"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.recker.flybanner.FlyBanner>
+        android:layout_height="match_parent"/>
 </RelativeLayout>

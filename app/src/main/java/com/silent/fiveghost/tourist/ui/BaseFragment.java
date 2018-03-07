@@ -1,6 +1,7 @@
 package com.silent.fiveghost.tourist.ui;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.widget.Toast;
 
 /**
  * @author FunChen
@@ -12,5 +13,15 @@ import android.app.Fragment;
  */
 public class BaseFragment extends Fragment {
 
-}
+	protected int pageSize = 20;
+	protected int pageCurrent = 1;
 
+	/**
+	 * [简化Toast]
+	 *
+	 * @param msg
+	 */
+	protected void showToast(String msg) {
+		Toast.makeText(getActivity(), msg, Toast.LENGTH_SHORT).show();
+	}
+}

@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.silent.fiveghost.tourist.R;
+import com.silent.fiveghost.tourist.ui.BaseFragment;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * 电子发票
  */
-public class Electronic_invoiceFragment extends Fragment {
+public class ElectronicInvoiceFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 
-import com.silent.fiveghost.tourist.ui.fragment.Electronic_invoiceFragment;
+import com.silent.fiveghost.tourist.ui.fragment.ElectronicInvoiceFragment;
 import com.silent.fiveghost.tourist.ui.fragment.PaperInvoiceFragment;
 import com.silent.fiveghost.tourist.R;
 
@@ -22,7 +22,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
     private FrameLayout invoicing_fragment;
     private FragmentManager msg;
     private FragmentTransaction transaction;
-    private Electronic_invoiceFragment electronic_invoiceFragment;
+    private ElectronicInvoiceFragment electronic_invoiceFragment;
     private PaperInvoiceFragment paper_invoiceFragment;
 
     @Override
@@ -39,7 +39,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
         //开启Fragment事物
         transaction = msg.beginTransaction();
 
-        electronic_invoiceFragment = new Electronic_invoiceFragment();
+        electronic_invoiceFragment = new ElectronicInvoiceFragment();
         transaction.add(R.id.invoicing_fragment, electronic_invoiceFragment);
         transaction.commit();
     }
@@ -51,7 +51,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
         invoicing_fragment = (FrameLayout) findViewById(R.id.invoicing_fragment);
         //        //判断home_pager是否为null
         if (electronic_invoiceFragment == null) {
-            electronic_invoiceFragment = new Electronic_invoiceFragment();
+            electronic_invoiceFragment = new ElectronicInvoiceFragment();
 //            //设置首页默认被选中
             invoicing_radio1.setChecked(true);
         }
@@ -71,7 +71,7 @@ public class InvoicingActivity extends AppCompatActivity implements View.OnClick
         switch (v.getId()) {
             case R.id.invoicing_radio1:
                 if ( electronic_invoiceFragment== null) {
-                    electronic_invoiceFragment = new Electronic_invoiceFragment();
+                    electronic_invoiceFragment = new ElectronicInvoiceFragment();
                     transaction.add(R.id.invoicing_fragment, this.electronic_invoiceFragment);
                 } else {
                     transaction.show(electronic_invoiceFragment);
