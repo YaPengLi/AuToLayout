@@ -37,7 +37,7 @@ import butterknife.Unbinder;
 /**
  * @author FunChen
  * @ClassName: ${TYPE_NAME}
- * @Description: ${TODO}(这里用一句话描述这个类的作用)
+ * @Description: ${TODO}(首页推荐页面)
  * @date 2018/3/7 15:24
  * <p>
  * ${TAGS}

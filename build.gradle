@@ -22,14 +22,29 @@ allprojects {
     }
 }
 
+//productFlavors {
+//    tourist_test {
+//        applicationId "com.silent.fiveghost.tourist"
+////        buildConfigField("String", "SOCIAL_HOST", "\"${project.SOCIAL_HOST_TEST}\"")
+////        manifestPlaceholders = [SERVER_URL: project.CLINIC_SERVER_URL_TEST, ALLIANCE_SERVER_URL: project.ALLIANCE_SERVER_URL_TEST, JTQY_SERVER_URL: project.JTQY_SERVER_URL_TEST, SOCIAL_HOST: project.SOCIAL_HOST_TEST, NIM_APP_KEY: project.CLINIC_NIM_APP_KEY_TEST, ACTION_TYPE: applicationId]
+//        versionName project.CLINIC_VERSION_NAME + project.CLINIC_RELEASE_TYPE + project.CLINIC_VERSION_CODE
+//        versionCode Integer.parseInt(project.CLINIC_VERSION_CODE)
+//    }
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.all {
+//            outputFileName = "driver_${variant.productFlavors[0].name}_v${variant.versionName}.apk"
+//        }
+//    }
+//}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
 ext {
-    compileSdkVersion = 26
+    compileSdkVersion = 27
     buildToolsVersion = '26.0.2'
     minSdkVersion = 15
-    targetSdkVersion = 26
+    targetSdkVersion = 27
     targetCompatibility = 1.7
     sourceCompatibility = 1.7
     androidSupport='26.0.0'
