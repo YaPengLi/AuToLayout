@@ -54,115 +54,53 @@
                     android:layout_width="match_parent"
                     android:layout_height="160dp"/>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/img_recommend_impress"
+                        android:layout_width="8dp"
+                        android:layout_height="17dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/color_button_bg"/>
+
+                    <TextView
+                        android:id="@+id/tv_recommend_impress_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="6dp"
+                        android:layout_toRightOf="@id/img_recommend_impress"
+                        android:text="印象管家"
+                        android:textColor="#000"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="6dp"
+                        android:layout_height="11dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@mipmap/btn_rightarrow"/>
+
+                </RelativeLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp">
 
-                    <LinearLayout
-                        android:id="@+id/ll_recommend_around_tag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:background="@mipmap/btn_zhoubianyou_norma"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="周边游"
-                            android:textSize="13sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ll_recommend_photography_tag"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:background="@mipmap/btn_sheyingyou_norma"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:text="摄影游"
-                            android:textSize="13sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ll_recommend_photography_tag_three"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:background="@mipmap/btn_xyou_normal"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:text="周边游"
-                            android:textSize="13sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ll_recommend_photography_tag_four"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:background="@mipmap/btn_xxyou_normal"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:text="周边游"
-                            android:textSize="13sp"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/ll_recommend_photography_tag_five"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="44dp"
-                            android:layout_height="44dp"
-                            android:background="@mipmap/btn_xxxyou_normal"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="11dp"
-                            android:text="周边游"
-                            android:textSize="13sp"/>
-                    </LinearLayout>
+                    <com.silent.fiveghost.tourist.view.ScrollviewForGridview
+                        android:id="@+id/rv_recommend_impress"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
                 </LinearLayout>
 
                 <RelativeLayout
@@ -173,11 +111,11 @@
 
                     <ImageView
                         android:id="@+id/iv_recommend_hot_path_line"
-                        android:layout_width="1dp"
+                        android:layout_width="8dp"
                         android:layout_height="17dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
-                        android:background="@mipmap/pic_categorie_line"/>
+                        android:background="@color/color_button_bg"/>
 
                     <TextView
                         android:id="@+id/tv_recommend_hot_path_title"
@@ -188,7 +126,7 @@
                         android:layout_toRightOf="@id/iv_recommend_hot_path_line"
                         android:text="热门路线"
                         android:textColor="#000"
-                        android:textSize="20dp"/>
+                        android:textSize="16sp"/>
 
                     <ImageView
                         android:layout_width="6dp"
@@ -201,173 +139,42 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp">
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <android.support.v7.widget.CardView
-                            android:id="@+id/cv"
-                            android:layout_width="168dp"
-                            android:layout_height="168dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="5dp"
-                            app:cardBackgroundColor="#D0D1D5"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="16dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                >
-
-                                <ImageView
-                                    android:id="@+id/iv_recommend_hot_path_img_one"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:scaleType="fitXY"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/tv_recommend_hot_path_one"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:textSize="20sp"/>
-
-                            </RelativeLayout>
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="168dp"
-                            android:layout_height="266dp"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="10dp"
-                            app:cardBackgroundColor="#D0D1D5"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="16dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@mipmap/ic_launcher">
-
-                                <ImageView
-                                    android:id="@+id/iv_recommend_hot_path_img_two"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/tv_recommend_hot_path_two"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:textSize="20sp"/>
-
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="168dp"
-                            android:layout_height="266dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="15dp"
-                            app:cardBackgroundColor="#D0D1D5"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="16dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <ImageView
-                                    android:id="@+id/iv_recommend_hot_path_img_three"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/tv_recommend_hot_path_three"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:textSize="20sp"/>
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="168dp"
-                            android:layout_height="168dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginTop="10dp"
-                            app:cardBackgroundColor="#D0D1D5"
-                            app:cardCornerRadius="16dp"
-                            app:cardElevation="16dp">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@mipmap/ic_launcher">
-
-                                <ImageView
-                                    android:id="@+id/iv_recommend_hot_path_img_four"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    />
-
-                                <TextView
-                                    android:id="@+id/tv_recommend_hot_path_four"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:textSize="20sp"/>
-                            </RelativeLayout>
-
-                        </android.support.v7.widget.CardView>
-                    </LinearLayout>
+                    <com.silent.fiveghost.tourist.view.ScrollviewForGridview
+                        android:id="@+id/rv_hot_path"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        />
                 </LinearLayout>
 
                 <RelativeLayout
                     android:id="@+id/rl_recommend_guide"
                     android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
 
                     <ImageView
                         android:id="@+id/iv_recommend_guide_line"
-                        android:layout_width="1dp"
+                        android:layout_width="8dp"
                         android:layout_height="17dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="22dp"
-                        android:background="@mipmap/pic_categorie_line"/>
+                        android:layout_marginLeft="20dp"
+                        android:background="@color/color_button_bg"/>
 
                     <TextView
                         android:id="@+id/tv_recommend_guide_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:paddingLeft="6dp"
                         android:layout_toRightOf="@id/iv_recommend_guide_line"
+                        android:paddingLeft="6dp"
                         android:text="导游风采"
                         android:textColor="#000"
-                        android:textSize="20dp"/>
+                        android:textSize="16dp"/>
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -382,6 +189,8 @@
                     android:id="@+id/lv_recommend_guide"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="15dp"/>
 
             </LinearLayout>

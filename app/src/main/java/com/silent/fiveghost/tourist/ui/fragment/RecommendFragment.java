@@ -3,29 +3,32 @@ package com.silent.fiveghost.tourist.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.adapter.RecommendGuideAdapter;
+import com.silent.fiveghost.tourist.adapter.RecommendHotPathAdapter;
 import com.silent.fiveghost.tourist.bean.HomeBean;
+import com.silent.fiveghost.tourist.manager.FullyGridLayoutManager;
 import com.silent.fiveghost.tourist.manager.FullyLinearLayoutManager;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseFragment;
 import com.silent.fiveghost.tourist.utils.UrlUtils;
 import com.silent.fiveghost.tourist.view.IView;
+import com.silent.fiveghost.tourist.view.ScrollviewForGridview;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,34 +51,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	ImageView ivMessageRecommend;
 	@BindView(R.id.search_view)
 	SearchView searchView;
-	@BindView(R.id.ll_recommend_around_tag)
-	LinearLayout llRecommendAroundTag;
-	@BindView(R.id.ll_recommend_photography_tag)
-	LinearLayout llRecommendPhotographyTag;
-	@BindView(R.id.ll_recommend_photography_tag_three)
-	LinearLayout llRecommendPhotographyTagThree;
-	@BindView(R.id.ll_recommend_photography_tag_four)
-	LinearLayout llRecommendPhotographyTagFour;
-	@BindView(R.id.ll_recommend_photography_tag_five)
-	LinearLayout llRecommendPhotographyTagFive;
-	@BindView(R.id.rl_hot_path_layout)
-	RelativeLayout rlHotPathLayout;
-	@BindView(R.id.iv_recommend_hot_path_img_one)
-	ImageView ivRecommendHotPathImgOne;
-	@BindView(R.id.tv_recommend_hot_path_one)
-	TextView tvRecommendHotPathOne;
-	@BindView(R.id.iv_recommend_hot_path_img_two)
-	ImageView ivRecommendHotPathImgTwo;
-	@BindView(R.id.tv_recommend_hot_path_two)
-	TextView tvRecommendHotPathTwo;
-	@BindView(R.id.iv_recommend_hot_path_img_three)
-	ImageView ivRecommendHotPathImgThree;
-	@BindView(R.id.tv_recommend_hot_path_three)
-	TextView tvRecommendHotPathThree;
-	@BindView(R.id.iv_recommend_hot_path_img_four)
-	ImageView ivRecommendHotPathImgFour;
-	@BindView(R.id.tv_recommend_hot_path_four)
-	TextView tvRecommendHotPathFour;
 	@BindView(R.id.iv_recommend_guide_line)
 	ImageView ivRecommendGuideLine;
 	@BindView(R.id.tv_recommend_guide_title)
@@ -88,12 +63,24 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	SwipeRefreshLayout swipe;
 	@BindView(R.id.fb_recommend_banner)
 	FlyBanner fbRecommendBanner;
-	@BindView(R.id.cv)
-	CardView cv;
+	@BindView(R.id.img_recommend_impress)
+	ImageView imgRecommendImpress;
+	@BindView(R.id.tv_recommend_impress_title)
+	TextView tvRecommendImpressTitle;
+	@BindView(R.id.rv_recommend_impress)
+	ScrollviewForGridview rvRecommendImpress;
+	@BindView(R.id.iv_recommend_hot_path_line)
+	ImageView ivRecommendHotPathLine;
+	@BindView(R.id.tv_recommend_hot_path_title)
+	TextView tvRecommendHotPathTitle;
+	@BindView(R.id.rv_hot_path)
+	ScrollviewForGridview rvHotPath;
 
 	private List<HomeBean.DataBean.AdvertBean> advert;
 	private List<HomeBean.DataBean.RouteBean> route;
 	private List<HomeBean.DataBean.GuideBean> guide;
+
+	private RecommendHotPathAdapter adapter;
 
 	private Unbinder unbinder;
 
@@ -105,7 +92,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 		initView(view);
 		initData();
-
 
 		return view;
 	}
@@ -131,9 +117,10 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 			@Override
 			public void success(HomeBean homeBean) {
-				swipe.setRefreshing(false);
-				swipe.setEnabled(true);
-
+				if (swipe != null) {
+					swipe.setRefreshing(false);
+					swipe.setEnabled(true);
+				}
 				onSuccess(homeBean);
 			}
 
@@ -144,7 +131,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 				Log.e("HomeActivity", s);
 			}
 		});
-		//http://120.79.137.110:83/api/v1/home/tourist-index
 		presenter.DoGet(UrlUtils.HOME_URL);
 	}
 
@@ -158,19 +144,51 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 				}
 				fbRecommendBanner.setImagesUrl(url);
 			}
+			//印象管家
+			adapter = new RecommendHotPathAdapter(getActivity(), homeBean.getData().getRoute());
+			rvRecommendImpress.setAdapter(adapter);
+			rvRecommendImpress.setHorizontalSpacing(10);
+			rvRecommendImpress.setStretchMode(GridView.NO_STRETCH);
+//			rvHotPath.setFocusableInTouchMode(false);
+
+			DisplayMetrics dm = new DisplayMetrics();
+			getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+			//套餐中课程数量
+			int size = homeBean.getData().getRoute().size();
+			float density = dm.density;
+			int allWidth = (int) (140 * size * density);
+			int itemWidth = (int) (130 * density);
+			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+					allWidth, LinearLayout.LayoutParams.FILL_PARENT);
+			rvRecommendImpress.setLayoutParams(params);
+			rvRecommendImpress.setColumnWidth(itemWidth);
+			rvRecommendImpress.setNumColumns(size);
 			//热门线路
-			if (homeBean.getData().getRoute() != null) {
-				homeBean.getData().getRoute().size();
-				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(0) == null ? "" : homeBean.getData().getRoute().get(0).getImg()).into(ivRecommendHotPathImgOne);
-				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(1) == null ? "" : homeBean.getData().getRoute().get(1).getImg()).into(ivRecommendHotPathImgTwo);
-				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(2) == null ? "" : homeBean.getData().getRoute().get(2).getImg()).into(ivRecommendHotPathImgThree);
-				Glide.with(getActivity()).load(homeBean.getData().getRoute().get(3) == null ? "" : homeBean.getData().getRoute().get(3).getImg()).into(ivRecommendHotPathImgFour);
-			}
+			adapter = new RecommendHotPathAdapter(getActivity(), homeBean.getData().getRoute());
+			rvHotPath.setAdapter(adapter);
+			rvHotPath.setHorizontalSpacing(10);
+			rvHotPath.setStretchMode(GridView.NO_STRETCH);
+
+//			rvHotPath.setFocusableInTouchMode(false);
+
+//			DisplayMetrics dm = new DisplayMetrics();
+//			getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+//			//套餐中课程数量
+//			int size = homeBean.getData().getRoute().size();
+//			float density = dm.density;
+//			int allWidth = (int) (140 * size * density);
+//			int itemWidth = (int) (130 * density);
+//			LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+//					allWidth, LinearLayout.LayoutParams.FILL_PARENT);
+			rvHotPath.setLayoutParams(params);
+			rvHotPath.setColumnWidth(itemWidth);
+			rvHotPath.setNumColumns(size);
 //			导游风采
 			if (homeBean.getData().getGuide() != null) {
-				Log.e("-----" , "=====" + homeBean.getData().getGuide().size());
+				Log.e("-----", "=====" + homeBean.getData().getGuide().size());
 				RecommendGuideAdapter GuideAdapter = new RecommendGuideAdapter(getActivity(), homeBean.getData().getGuide());
 				lvRecommendGuide.setAdapter(GuideAdapter);
+				GuideAdapter.notifyDataSetChanged();
 			}
 		} else {
 			showToast("数据加载失败！");

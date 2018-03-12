@@ -3,6 +3,7 @@ package com.silent.fiveghost.tourist.adapter;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -22,7 +23,6 @@ import java.util.List;
  * ${TAGS}
  */
 public class RecommendGuideAdapter extends BaseQuickAdapter<HomeBean.DataBean.GuideBean, BaseViewHolder> {
-
 	private Context mContext;
 
 	public RecommendGuideAdapter(Context context, List<HomeBean.DataBean.GuideBean> data) {
@@ -36,6 +36,7 @@ public class RecommendGuideAdapter extends BaseQuickAdapter<HomeBean.DataBean.Gu
 
 		helper.setText(R.id.tv_recommend_guide_item_title, item.getUsername());
 		helper.setText(R.id.tv_recommend_guide_item_preference, item.getGood_line_desc());
+		Log.e("convert", "----" + helper.getLayoutPosition());
 //		helper.setText(R.id.tv_recommend_guide_item_title, item.getUsername());
 	}
 }
