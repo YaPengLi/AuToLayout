@@ -1,5 +1,6 @@
 package com.silent.fiveghost.tourist.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,6 +19,8 @@ import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.adapter.RecommendGuideAdapter;
@@ -26,6 +30,8 @@ import com.silent.fiveghost.tourist.manager.FullyGridLayoutManager;
 import com.silent.fiveghost.tourist.manager.FullyLinearLayoutManager;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseFragment;
+import com.silent.fiveghost.tourist.ui.activity.GuideStyleActivity;
+import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.silent.fiveghost.tourist.utils.UrlUtils;
 import com.silent.fiveghost.tourist.view.IView;
 import com.silent.fiveghost.tourist.view.ScrollviewForGridview;
@@ -100,7 +106,13 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 		swipe.setOnRefreshListener(this);
 		FullyLinearLayoutManager manager = new FullyLinearLayoutManager(getActivity());
 		lvRecommendGuide.setLayoutManager(manager);
-
+//		lvRecommendGuide.addOnItemTouchListener(new OnItemChildClickListener() {
+//			@Override
+//			public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+//				Log.e("lvRecommendGuide", "----" + position);
+//			}
+//		});
+//		GuideStyleActivity
 	}
 
 	private void initData() {
@@ -163,12 +175,23 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 			rvRecommendImpress.setLayoutParams(params);
 			rvRecommendImpress.setColumnWidth(itemWidth);
 			rvRecommendImpress.setNumColumns(size);
+			rvRecommendImpress.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					startActivity(new Intent(getActivity(), RoadDetailsActivity.class));
+				}
+			});
 			//热门线路
 			adapter = new RecommendHotPathAdapter(getActivity(), homeBean.getData().getRoute());
 			rvHotPath.setAdapter(adapter);
 			rvHotPath.setHorizontalSpacing(10);
 			rvHotPath.setStretchMode(GridView.NO_STRETCH);
-
+			rvHotPath.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+					startActivity(new Intent(getActivity(), RoadDetailsActivity.class));
+				}
+			});
 //			rvHotPath.setFocusableInTouchMode(false);
 
 //			DisplayMetrics dm = new DisplayMetrics();

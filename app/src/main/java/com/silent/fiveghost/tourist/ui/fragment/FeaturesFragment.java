@@ -1,90 +1,134 @@
 package com.silent.fiveghost.tourist.ui.fragment;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.silent.fiveghost.tourist.R;
+import com.silent.fiveghost.tourist.adapter.FeatureAdapter;
+import com.silent.fiveghost.tourist.bean.FeaturesBean;
+import com.silent.fiveghost.tourist.bean.HomeBean;
+import com.silent.fiveghost.tourist.presenter.IPresenter;
+import com.silent.fiveghost.tourist.ui.activity.LoginActivity;
+import com.silent.fiveghost.tourist.utils.Constant;
+import com.silent.fiveghost.tourist.utils.UrlUtils;
+import com.silent.fiveghost.tourist.view.IView;
+
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
-*  特色
-* */
-public class FeaturesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
-    @BindView(R.id.rv_shtick)
-    ListView rvShtick;
-    Unbinder unbinder;
-    @BindView(R.id.spl_features)
-    SwipeRefreshLayout swiper;
+ * 特色
+ */
+public class FeaturesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
+	Unbinder unbinder;
+	@BindView(R.id.spl_features)
+	SwipeRefreshLayout swipe;
+	@BindView(R.id.sv_shtick)
+	SearchView svShtick;
+	@BindView(R.id.iv_message_shtick)
+	ImageView ivMessageShtick;
+	@BindView(R.id.tv_feature_sales_title)
+	TextView tvFeatureSalesTitle;
+	@BindView(R.id.img_feature_title_icon)
+	ImageView imgFeatureTitleIcon;
+	@BindView(R.id.rl_feature_sales_layout)
+	RelativeLayout rlFeatureSalesLayout;
+	@BindView(R.id.rl_feature_collect_layout)
+	RelativeLayout rlFeatureCollectLayout;
+	@BindView(R.id.rl_feature_last_layout)
+	RelativeLayout rlFeatureLastLayout;
+	@BindView(R.id.tv_feature_screen_title)
+	TextView tvFeatureScreenTitle;
+	@BindView(R.id.img_feature_screen_icon)
+	ImageView imgFeatureScreenIcon;
+	@BindView(R.id.rl_feature_screen_layout)
+	RelativeLayout rlFeatureScreenLayout;
+	@BindView(R.id.tab_shtick)
+	LinearLayout tabShtick;
+	@BindView(R.id.rv_shtick)
+	RecyclerView rvShtick;
+	@BindView(R.id.tv_feature_collect_title)
+	TextView tvFeatureCollectTitle;
+	@BindView(R.id.tv_feature_last_title)
+	TextView tvFeatureLastTitle;
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.features, container, false);
-        unbinder = ButterKnife.bind(this, view);
-        rvShtick.setAdapter(new LvShtickAdapter());
-        //为SwipeRefreshLayout设置监听事件
-        swiper.setOnRefreshListener(this);
-        //为SwipeRefreshLayout设置刷新时的颜色变化，最多可以设置4种
-        swiper.setColorSchemeResources(android.R.color.holo_blue_bright,
-                android.R.color.holo_green_light,
-                android.R.color.holo_orange_light,
-                android.R.color.holo_red_light);
-        return view;
-    }
+	private String mToken;
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
+	@Nullable
+	@Override
+	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.features, container, false);
+		unbinder = ButterKnife.bind(this, view);
 
-    @Override
-    public void onRefresh() {
-        //刷新
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //结束后停止刷新
-                swiper.setRefreshing(false);
-            }
-        }, 3000);
+		initView();
+		return view;
+	}
 
-    }
+	private void initView() {
+		swipe.setOnRefreshListener(this);
+		LinearLayoutManager manager = new LinearLayoutManager(getActivity());
+		rvShtick.setLayoutManager(manager);
+		getData();
+	}
 
-    private class LvShtickAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return 5;
-        }
+	private void getData() {
+//		Map<String, String> map = Constant.getMap();
+		SharedPreferences preferences = getActivity().getSharedPreferences("the_username_and_password", LoginActivity.MODE_PRIVATE);
+		mToken = preferences.getString("accessToken", "");
+//		map.put("access_token", mToken);
 
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
+		IPresenter presenter = new IPresenter(new IView<FeaturesBean>() {
 
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
+			@Override
+			public void success(FeaturesBean bean) {
+				if (swipe != null) {
+					swipe.setRefreshing(false);
+					swipe.setEnabled(true);
+				}
+				onSuccess(bean);
+			}
 
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.lvshtickitem, parent, false);
+			@Override
+			public void defeat(String s) {
+				swipe.setRefreshing(false);
+				swipe.setEnabled(true);
+			}
+		});
 
-            return convertView;
-        }
+		presenter.DoGet(UrlUtils.ROUTE_URL + mToken);
+	}
+
+	private void onSuccess(FeaturesBean bean) {
+		rvShtick.setAdapter(new FeatureAdapter(getActivity(), bean.getData().getItems()));
+	}
 
 
-    }
+	@Override
+	public void onRefresh() {
+
+	}
+
+
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+		unbinder.unbind();
+	}
 }

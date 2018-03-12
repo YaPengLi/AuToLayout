@@ -49,6 +49,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
 	private String mUsername;
 	private String mPassword;
+	private String mToken;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 		SharedPreferences.Editor edit = preferences.edit();
 		edit.putString("username", login_edit_yhm.getText().toString());
 		edit.putString("password", login_edit_mm.getText().toString());
+		edit.putString("accessToken", mToken);
 		edit.commit();
 
 	}
@@ -218,7 +220,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 			public void success(LoginBean loginBean) {
 				errcode = loginBean.getErrcode();
 				if (errcode == 1) {
+					mToken = loginBean.getData().getUser().getAccess_token();
 					saveUserLoginData();
+
 					startActivity(HomeActivity.class);
 					finish();
 				} else {

@@ -1,140 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_button_bg"
+    android:clipToPadding="false"
     android:fillViewport="true"
+    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_light_white"
+        android:orientation="vertical">
 
-                    <!--
-                    AppBarLayout里放入的都可以跟着向上滑动滑出布局的的，
-                    添加app:layout_scrollFlags="scroll"属性可以滑出布局
-                    TabLayout没有添加，所以停留在顶部
-                    -->
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="170px"
-                        android:background="#2C3238"
-                        app:layout_scrollFlags="scroll"
-                        >
+        <!--
+        AppBarLayout里放入的都可以跟着向上滑动滑出布局的的，
+        添加app:layout_scrollFlags="scroll"属性可以滑出布局
+        TabLayout没有添加，所以停留在顶部
+        -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:background="@color/color_button_bg"
+            app:layout_scrollFlags="scroll"
+            >
 
-                        <android.support.v7.widget.SearchView
-                            android:id="@+id/sv_shtick"
-                            android:layout_width="594px"
-                            android:layout_height="50px"
-                            android:layout_centerHorizontal="true"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/shape_one"></android.support.v7.widget.SearchView>
+            <android.support.v7.widget.SearchView
+                android:id="@+id/sv_shtick"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_one"/>
 
-                        <ImageView
-                            android:id="@+id/iv_message_shtick"
-                            android:layout_width="33px"
-                            android:layout_height="26px"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginRight="30px"
-                            android:src="@mipmap/btn_top_message" />
+            <ImageView
+                android:id="@+id/iv_message_shtick"
+                android:layout_width="16dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/btn_top_message"/>
 
-                    </RelativeLayout>
+        </RelativeLayout>
 
-                    <LinearLayout
-                        android:id="@+id/tab_shtick"
-                        android:layout_width="match_parent"
-                        android:layout_height="120px"
-                        android:background="#191F28"
-                        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/tab_shtick"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/color_dark_white"
+            android:orientation="horizontal">
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rl_feature_sales_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:text="销量"
-                                android:textColor="#fff"
-                                android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tv_feature_sales_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="销量"
+                    android:textColor="@color/color_button_bg"
+                    android:textSize="20sp"/>
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/img_feature_title_icon"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/tv_feature_sales_title"
+                    android:background="@mipmap/icon_sales"/>
 
-                                />
-                        </RelativeLayout>
+            </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rl_feature_collect_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:text="收藏量"
-                                android:textColor="#fff"
-                                android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tv_feature_collect_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="收藏量"
+                    android:textColor="@color/color_text_default"
+                    android:textSize="20sp"/>
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                                />
-                        </RelativeLayout>
+                    />
+            </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rl_feature_last_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:text="最新"
-                                android:textColor="#fff"
-                                android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/tv_feature_last_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="最新"
+                    android:textColor="@color/color_text_default"
+                    android:textSize="20sp"/>
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                                />
-                        </RelativeLayout>
+                    />
+            </RelativeLayout>
 
-                        <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+            <RelativeLayout
+                android:id="@+id/rl_feature_screen_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_feature_screen_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="昆明"
+                    android:textColor="@color/color_text_default"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:id="@+id/img_feature_screen_icon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/tv_feature_screen_title"
+                    android:background="@mipmap/icon_screen"/>
+            </RelativeLayout>
+        </LinearLayout>
 
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:src="@mipmap/pic_oriented" />
-                        </RelativeLayout>
-                    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/spl_features"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                <RelativeLayout
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_shtick"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                   >
-                    <android.support.v4.widget.SwipeRefreshLayout
-                        android:id="@+id/spl_features"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    android:layout_height="match_parent"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
 
-                        <ListView
-                            android:id="@+id/rv_shtick"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
-                    </android.support.v4.widget.SwipeRefreshLayout>
-
-                </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

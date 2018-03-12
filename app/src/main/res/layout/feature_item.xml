@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/img_feature_item_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/img_feature_item_icon"
+        >
+
+        <TextView
+            android:id="@+id/tv_feature_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/color_text_dark"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_feature_item_word1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_feature_item_title"
+            android:layout_marginTop="10dp"
+            android:text="1234"
+            android:textColor="@color/color_text_default"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_feature_item_word2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_feature_item_word1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_feature_item_word1"
+            android:text="1234"
+            android:textColor="@color/color_text_default"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_feature_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="¥210"
+            android:textColor="@color/color_text_dark"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_feature_item_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_feature_item_price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_feature_item_price"
+            android:text="¥210"
+            android:textColor="@color/color_text_default"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_feature_item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_feature_item_price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_feature_item_pay"
+            android:text="¥210"
+            android:textColor="@color/color_text_default"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_feature_item_collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_feature_item_price"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_feature_item_comment"
+            android:text="¥210"
+            android:textColor="@color/color_text_default"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</RelativeLayout>
