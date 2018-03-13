@@ -1,6 +1,7 @@
 package com.silent.fiveghost.tourist.ui.fragment;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -20,6 +21,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseQuickAdapter.OnItemClickListener;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
@@ -30,7 +32,9 @@ import com.silent.fiveghost.tourist.manager.FullyGridLayoutManager;
 import com.silent.fiveghost.tourist.manager.FullyLinearLayoutManager;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseFragment;
+import com.silent.fiveghost.tourist.ui.activity.GuideDetailActivity;
 import com.silent.fiveghost.tourist.ui.activity.GuideStyleActivity;
+import com.silent.fiveghost.tourist.ui.activity.LoginActivity;
 import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.silent.fiveghost.tourist.utils.UrlUtils;
 import com.silent.fiveghost.tourist.view.IView;
@@ -89,6 +93,7 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	private RecommendHotPathAdapter adapter;
 
 	private Unbinder unbinder;
+	private String mToken;
 
 	@Nullable
 	@Override
@@ -106,13 +111,14 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 		swipe.setOnRefreshListener(this);
 		FullyLinearLayoutManager manager = new FullyLinearLayoutManager(getActivity());
 		lvRecommendGuide.setLayoutManager(manager);
-//		lvRecommendGuide.addOnItemTouchListener(new OnItemChildClickListener() {
-//			@Override
-//			public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-//				Log.e("lvRecommendGuide", "----" + position);
-//			}
-//		});
-//		GuideStyleActivity
+		lvRecommendGuide.addOnItemTouchListener(new com.chad.library.adapter.base.listener.OnItemClickListener() {
+			@Override
+			public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
+				Intent intent = new Intent(getActivity(), GuideDetailActivity.class);
+				intent.putExtra("gid", guide.get(position).getGid() + "");
+				getActivity().startActivity(intent);
+			}
+		});
 	}
 
 	private void initData() {
@@ -125,6 +131,8 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	}
 
 	private void getData() {
+		SharedPreferences preferences = getActivity().getSharedPreferences("the_username_and_password", LoginActivity.MODE_PRIVATE);
+		mToken = preferences.getString("accessToken", "");
 		IPresenter presenter = new IPresenter(new IView<HomeBean>() {
 
 			@Override
@@ -143,7 +151,7 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 				Log.e("HomeActivity", s);
 			}
 		});
-		presenter.DoGet(UrlUtils.HOME_URL);
+		presenter.DoGet(UrlUtils.HOME_URL + mToken);
 	}
 
 	//请求成功后数据渲染
@@ -165,7 +173,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 			DisplayMetrics dm = new DisplayMetrics();
 			getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-			//套餐中课程数量
 			int size = homeBean.getData().getRoute().size();
 			float density = dm.density;
 			int allWidth = (int) (140 * size * density);
@@ -196,7 +203,6 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 //			DisplayMetrics dm = new DisplayMetrics();
 //			getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
-//			//套餐中课程数量
 //			int size = homeBean.getData().getRoute().size();
 //			float density = dm.density;
 //			int allWidth = (int) (140 * size * density);
@@ -208,9 +214,11 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 			rvHotPath.setNumColumns(size);
 //			导游风采
 			if (homeBean.getData().getGuide() != null) {
-				Log.e("-----", "=====" + homeBean.getData().getGuide().size());
-				RecommendGuideAdapter GuideAdapter = new RecommendGuideAdapter(getActivity(), homeBean.getData().getGuide());
+				guide = homeBean.getData().getGuide();
+				Log.e("-----", "=====" + guide.size());
+				RecommendGuideAdapter GuideAdapter = new RecommendGuideAdapter(getActivity(), guide);
 				lvRecommendGuide.setAdapter(GuideAdapter);
+
 				GuideAdapter.notifyDataSetChanged();
 			}
 		} else {

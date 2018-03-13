@@ -9,9 +9,10 @@ public interface UrlUtils {
 	String LOGIN_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/auth/login";
 	String REGISTER_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/auth/signup";
 	String FORGET_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/auth/reset-password";
-	String HOME_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/home/tourist-index?access_token=_za8e8fMg-ueDPbvVeZCBDWrFCrabPa-&order_id= 2018022295140111";
+	String HOME_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/home/tourist-index?&order_id= 2018022295140111&access_token=";
 	String ROUTE_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/route/hot-route?access_token=";
-//	String HOME_URL = "http://120.79.137.110:83/api/v1/home/tourist-index?access_token=_za8e8fMg-ueDPbvVeZCBDWrFCrabPa-&order_id= 2018022295140111";
+	String GUIDE_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/guide/guide-info?access_token=";
+
 
 
 }

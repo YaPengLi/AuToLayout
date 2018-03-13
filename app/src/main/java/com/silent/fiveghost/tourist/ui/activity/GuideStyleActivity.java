@@ -1,6 +1,7 @@
 package com.silent.fiveghost.tourist.ui.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,13 +28,18 @@ public class GuideStyleActivity extends BaseActivity {
     @BindView(R.id.iv_message_all)
     ImageView ivMessageAll;
     @BindView(R.id.lv_guide_style)
-    ListView lvGuideStyle;
+    RecyclerView rvGuideStyle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide_style);
         ButterKnife.bind(this);
+
+        initView();
+    }
+
+    private void initView() {
         ivMessageAll.setVisibility(View.GONE);
         tvTitleAll.setText("导游");
         ivBackAll.setOnClickListener(new View.OnClickListener() {
@@ -42,36 +48,5 @@ public class GuideStyleActivity extends BaseActivity {
                 startActivity(HomeActivity.class);
             }
         });
-        lvGuideStyle.setAdapter(new LvGuideAdapter());
-        lvGuideStyle.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(GuideDetailActivity.class);
-            }
-        });
-    }
-
-    class LvGuideAdapter extends BaseAdapter {
-
-        @Override
-        public int getCount() {
-            return 5;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            convertView = LayoutInflater.from(GuideStyleActivity.this).inflate(R.layout.guidestyleitem, parent, false);
-            return convertView;
-        }
     }
 }

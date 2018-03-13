@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_light_white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <include
+        layout="@layout/title_all"/>
+
+    <com.silent.fiveghost.tourist.view.MyNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_light_white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                >
+
+                <com.silent.fiveghost.tourist.view.XCRoundImageView
+                    android:id="@+id/img_guide_detail_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:id="@+id/tv_guide_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="导游A"
+                    android:textColor="@color/color_text_dark"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:src="@mipmap/icon_nv"/>
+
+                <TextView
+                    android:id="@+id/tv_guide_detail_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/color_text_pink"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_guide_detail_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/color_text_default"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_guide_detail_image1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_guide_detail_image2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"/>
+
+                    <ImageView
+                        android:id="@+id/img_guide_detail_image3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="车型"
+                            android:textColor="@color/color_text_default"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_guide_detail_car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="大巴车"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="20sp"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="星级"
+                            android:textColor="@color/color_text_default"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_guide_detail_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="五星级"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="20sp"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="接单城市"
+                            android:textColor="@color/color_text_default"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_guide_detail_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:text="昆明"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="20sp"
+                            />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/cut_off_line_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="带团偏好"
+                android:textColor="@color/color_text_dark"
+                android:textSize="18sp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_guide_detail_like"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/cut_off_line_gray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="擅长路线"
+                android:textColor="@color/color_text_dark"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tv_guide_detail_path_context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/color_text_default"/>
+
+            <include layout="@layout/cut_off_line_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_guide_detail_road"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="我的精品路线（10）"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp">
+
+                    <com.silent.fiveghost.tourist.view.ScrollviewForGridview
+                        android:id="@+id/rv_guide_detail_path"
+                        android:layout_width="fill_parent"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_guide_detail_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="32sp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                </RelativeLayout>
+
+                <include layout="@layout/cut_off_line_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_guide_detail_path_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="路线点评"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_guide_detail_path_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/tv_guide_detail_path_title"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@id/tv_guide_detail_path_title"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="14sp"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_guide_detail_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+        </LinearLayout>
+    </com.silent.fiveghost.tourist.view.MyNestedScrollView>
+</LinearLayout>
