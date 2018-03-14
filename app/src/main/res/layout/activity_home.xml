@@ -14,70 +14,128 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="50dp"/>
 
-    <RadioGroup
-        android:id="@+id/mRadioGroup"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:background="#0000"
-        android:backgroundTint="@color/color_white"
-        android:clipChildren="false"
-        android:orientation="horizontal">
+        android:gravity="bottom"
+        android:weightSum="6"
+        android:background="@color/color_light_white">
 
-        <RadioButton
-            android:id="@+id/mRadio_home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:checked="true"
-            android:drawableTop="@drawable/select_homepage"
-            android:gravity="center_horizontal|bottom"
-            android:text="推荐"
-            android:textColor="@drawable/rb_focus_color"/>
+        <RelativeLayout
+            android:id="@+id/rl_home"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1">
 
-        <RadioButton
-            android:id="@+id/mRadio_route"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/select_route"
-            android:gravity="center_horizontal|bottom"
-            android:text="特色"
-            android:textColor="@drawable/rb_focus_color"/>
+            <ImageView
+                android:id="@+id/img_home_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/icon_home_select"/>
 
+            <TextView
+                android:id="@+id/tv_home_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text="推荐"
+                android:textColor="@color/color_button_bg"
+                />
+        </RelativeLayout>
 
-        <RadioButton
-            android:id="@+id/mRadio_GrabaSingle"
-            android:layout_width="0dp"
+        <RelativeLayout
+            android:id="@+id/rl_feature"
+            android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@mipmap/bottom_btn_jiahao"
-            android:gravity="center_horizontal"
-            />
+            >
 
-        <RadioButton
-            android:id="@+id/mRadio_order"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/select_order"
-            android:gravity="center_horizontal|bottom"
-            android:text="订单"
-            android:textColor="@drawable/rb_focus_color"/>
+            <ImageView
+                android:id="@+id/img_feature_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_route"/>
 
-        <RadioButton
-            android:id="@+id/mRadio_persional"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            <TextView
+                android:id="@+id/tv_feature_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text="特色"
+                android:textColor="@color/color_text_default"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_weight="2"
+            android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/img_home_issue"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:background="@mipmap/bottom_btn_jiahao"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_order"
+            android:layout_width="50dp"
             android:layout_weight="1"
-            android:button="@null"
-            android:drawableTop="@drawable/select_persional"
-            android:gravity="center_horizontal|bottom"
-            android:text="我的"
-            android:textColor="@drawable/rb_focus_color"/>
-    </RadioGroup>
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/img_order_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_order"/>
+
+            <TextView
+                android:id="@+id/tv_order_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text="订单"
+                android:textColor="@color/color_text_default"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mine"
+            android:layout_width="50dp"
+            android:layout_weight="1"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/img_mine_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/select_persional"/>
+
+            <TextView
+                android:id="@+id/tv_mine_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text="个人"
+                android:textColor="@color/color_text_default"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
 </RelativeLayout>

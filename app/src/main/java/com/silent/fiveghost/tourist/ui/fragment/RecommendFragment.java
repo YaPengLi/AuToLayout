@@ -21,19 +21,15 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseQuickAdapter.OnItemClickListener;
-import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.adapter.RecommendGuideAdapter;
 import com.silent.fiveghost.tourist.adapter.RecommendHotPathAdapter;
 import com.silent.fiveghost.tourist.bean.HomeBean;
-import com.silent.fiveghost.tourist.manager.FullyGridLayoutManager;
 import com.silent.fiveghost.tourist.manager.FullyLinearLayoutManager;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
 import com.silent.fiveghost.tourist.ui.BaseFragment;
 import com.silent.fiveghost.tourist.ui.activity.GuideDetailActivity;
-import com.silent.fiveghost.tourist.ui.activity.GuideStyleActivity;
 import com.silent.fiveghost.tourist.ui.activity.LoginActivity;
 import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.silent.fiveghost.tourist.utils.UrlUtils;
@@ -92,6 +88,8 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 
 	private RecommendHotPathAdapter adapter;
 
+	private IPresenter presenter;
+
 	private Unbinder unbinder;
 	private String mToken;
 
@@ -133,7 +131,7 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	private void getData() {
 		SharedPreferences preferences = getActivity().getSharedPreferences("the_username_and_password", LoginActivity.MODE_PRIVATE);
 		mToken = preferences.getString("accessToken", "");
-		IPresenter presenter = new IPresenter(new IView<HomeBean>() {
+		presenter = new IPresenter(new IView<HomeBean>() {
 
 			@Override
 			public void success(HomeBean homeBean) {
@@ -231,6 +229,12 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 	public void onRefresh() {
 		pageCurrent = 1;
 		getData();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		onRefresh();
 	}
 
 	@Override

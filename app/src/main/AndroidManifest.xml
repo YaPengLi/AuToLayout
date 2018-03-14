@@ -38,16 +38,16 @@
         <activity android:name=".ui.activity.GuideDetailActivity"/>
         <activity android:name=".ui.activity.RoadDetailsActivity"/>
         <activity android:name=".ui.activity.SettingActivity"/>
-        <activity android:name=".ui.activity.rSafetyActivity"/>
         <activity android:name=".ui.activity.PhoneActivity"/>
         <activity android:name=".ui.activity.PasswordActivity"/>
         <activity android:name=".ui.activity.HelpCenterActivity"/>
         <activity android:name=".ui.activity.OneStopReleaseActivity"/>
         <activity android:name=".ui.activity.SubStationReleaseActivity"/>
         <activity android:name=".ui.activity.InvoicingActivity"/>
-        <activity android:name=".ui.activity.CollectActivity"></activity>
+        <activity android:name=".ui.activity.CollectActivity"/>
         <activity android:name=".ui.activity.OrderDetailsActivity"/>
-        <activity android:name=".ui.activity.OrderContentActivity"></activity>
+        <activity android:name=".ui.activity.OrderContentActivity"/>
+        <activity android:name=".ui.activity.IssueActivity"/>
     </application>
 
 </manifest>
