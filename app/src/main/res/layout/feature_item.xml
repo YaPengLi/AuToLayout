@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/img_feature_item_icon"
         android:layout_width="120dp"
+        android:scaleType="centerCrop"
         android:layout_height="120dp"
         />
 

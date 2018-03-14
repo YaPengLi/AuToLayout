@@ -2,8 +2,132 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_light_white"
+    >
 
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/title_all"/>
 
+    <LinearLayout
+        android:id="@+id/ll_issue_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/include_title"
+        android:background="@color/color_dark_white"
+        android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/tv_issue_one_state"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="一站式发布"
+            android:textColor="@color/color_text_default"/>
+
+        <TextView
+            android:id="@+id/tv_issue_sub_state"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分站式发布"
+            android:textColor="@color/color_text_default"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_issue_go"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_issue_tab"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/color_dark_white">
+
+        <TextView
+            android:id="@+id/tv_issue_text_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="出发城市"
+            android:textColor="@color/color_text_dark"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/img_issue_icon_go"
+            android:layout_width="15dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/icon_down_arrow"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_issue_go_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_below="@+id/rl_issue_go"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_issue_to"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rl_issue_go"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/color_dark_white">
+
+        <TextView
+            android:id="@+id/tv_issue_text_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="出发城市"
+            android:textColor="@color/color_text_dark"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/img_issue_icon_to"
+            android:layout_width="15dp"
+            android:layout_height="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@mipmap/icon_down_arrow"/>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_issue_to_city_list"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_below="@+id/rl_issue_to"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_issue_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/color_button_bg"
+        android:text="发布行程"
+        android:textColor="@color/color_light_white"
+        android:textSize="16sp"/>
 </RelativeLayout>

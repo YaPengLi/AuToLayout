@@ -21,5 +21,7 @@ public class IssueActivity extends BaseActivity {
 		setContentView(R.layout.activity_issue);
 
 
+
+
 	}
 }
