@@ -48,6 +48,7 @@
         <activity android:name=".ui.activity.OrderDetailsActivity"/>
         <activity android:name=".ui.activity.OrderContentActivity"/>
         <activity android:name=".ui.activity.IssueActivity"/>
+        <activity android:name=".ui.activity.IssueOneStepActivity"/>
     </application>
 
 </manifest>
