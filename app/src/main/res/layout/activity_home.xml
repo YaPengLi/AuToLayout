@@ -83,7 +83,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
-            android:background="@mipmap/bottom_btn_jiahao"/>
+            android:background="@mipmap/icon_issue"/>
 
         </RelativeLayout>
 

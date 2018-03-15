@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
  * <p>
  * ${TAGS}
  */
-public class IssueActivity extends BaseActivity implements View.OnClickListener{
+public class IssueActivity extends BaseActivity implements View.OnClickListener {
 
 	@BindView(R.id.iv_back_all)
 	ImageView ivBackAll;
@@ -75,14 +75,13 @@ public class IssueActivity extends BaseActivity implements View.OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 			case R.id.btn_issue_submit:
-
-//				startActivity(new Intent(IssueActivity.this, .class));
+				startActivity(new Intent(IssueActivity.this, IssueOneStepActivity.class));
+				finish();
 				break;
+
 
 			default:
-
 				break;
-
 		}
 	}
 }
