@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.silent.fiveghost.tourist">
+    package="com.silent.fiveghost.tourist">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".app.MyAppLication"
@@ -16,39 +15,40 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="design_width"
-            android:value="750"/>
+            android:value="750" />
         <meta-data
             android:name="design_height"
-            android:value="1334"/>
+            android:value="1334" />
 
-        <activity android:name=".ui.activity.WelcomeActivity"/>
-        <activity android:name=".ui.activity.HomeActivity"/>
-        <activity android:name=".ui.activity.LoginActivity"/>
-        <activity android:name=".ui.activity.RegisterActivity"/>
-        <activity android:name=".ui.activity.MessageActivity"/>
-        <activity android:name=".ui.activity.GuideStyleActivity"/>
-        <activity android:name=".ui.activity.GuideDetailActivity"/>
-        <activity android:name=".ui.activity.RoadDetailsActivity"/>
-        <activity android:name=".ui.activity.SettingActivity"/>
-        <activity android:name=".ui.activity.PhoneActivity"/>
-        <activity android:name=".ui.activity.PasswordActivity"/>
-        <activity android:name=".ui.activity.HelpCenterActivity"/>
-        <activity android:name=".ui.activity.OneStopReleaseActivity"/>
-        <activity android:name=".ui.activity.SubStationReleaseActivity"/>
-        <activity android:name=".ui.activity.InvoicingActivity"/>
-        <activity android:name=".ui.activity.CollectActivity"/>
-        <activity android:name=".ui.activity.OrderDetailsActivity"/>
-        <activity android:name=".ui.activity.OrderContentActivity"/>
-        <activity android:name=".ui.activity.IssueActivity"/>
-        <activity android:name=".ui.activity.IssueOneStepActivity"/>
+        <activity android:name=".ui.activity.WelcomeActivity" />
+        <activity android:name=".ui.activity.HomeActivity" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.RegisterActivity" />
+        <activity android:name=".ui.activity.MessageActivity" />
+        <activity android:name=".ui.activity.GuideStyleActivity" />
+        <activity android:name=".ui.activity.GuideDetailActivity" />
+        <activity android:name=".ui.activity.RoadDetailsActivity" />
+        <activity android:name=".ui.activity.SettingActivity" />
+        <activity android:name=".ui.activity.PhoneActivity" />
+        <activity android:name=".ui.activity.PasswordActivity" />
+        <activity android:name=".ui.activity.HelpCenterActivity" />
+        <activity android:name=".ui.activity.OneStopReleaseActivity" />
+        <activity android:name=".ui.activity.SubStationReleaseActivity" />
+        <activity android:name=".ui.activity.InvoicingActivity" />
+        <activity android:name=".ui.activity.CollectActivity" />
+        <activity android:name=".ui.activity.OrderDetailsActivity" />
+        <activity android:name=".ui.activity.OrderContentActivity" />
+        <activity android:name=".ui.activity.IssueActivity" />
+        <activity android:name=".ui.activity.IssueOneStepActivity" />
+        <activity android:name=".ui.activity.TabOrderActivity"></activity>
     </application>
 
 </manifest>

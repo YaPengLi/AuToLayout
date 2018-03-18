@@ -222,7 +222,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 				if (errcode == 1) {
 					mToken = loginBean.getData().getUser().getAccess_token();
 					saveUserLoginData();
-
 					startActivity(HomeActivity.class);
 					finish();
 				} else {

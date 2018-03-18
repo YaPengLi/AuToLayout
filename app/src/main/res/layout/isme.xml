@@ -3,50 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/isme_background_bg"
+    android:background="@color/color_button_bg"
     android:orientation="vertical">
     <!--<个人中心>-->
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="88px"
-        android:layout_marginTop="40px"
+        android:layout_height="60dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
             android:text="个人中心"
-            android:textSize="24dp" />
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
 
     </RelativeLayout>
     <ScrollView
+        android:background="@drawable/isme_background_bg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <!--<头像位置>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80px"
+                android:layout_marginTop="40px"
                 android:orientation="horizontal">
 
                 <com.silent.fiveghost.tourist.view.RoundImageView
                     android:id="@+id/img_title"
-                    android:layout_width="235px"
-                    android:layout_height="235px"
-                    android:layout_marginLeft="25px"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="30dp"
                     android:src="@drawable/isme_imgtitle"
                     app:type="round" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="53px"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -54,6 +57,7 @@
                         android:layout_height="wrap_content"
                         android:text="name"
                         android:textSize="36px"
+                        android:textColor="@color/color_white"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -65,13 +69,15 @@
                         <ImageView
                             android:layout_width="30px"
                             android:layout_height="30px"
-                            android:src="@drawable/isme_wumen" />
+                            android:src="@mipmap/male" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="6px"
+                            android:layout_marginLeft="5dp"
                             android:text="age"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/color_white"
                             android:textSize="26px"
                             android:textStyle="bold" />
 
@@ -79,9 +85,11 @@
                             android:layout_width="30px"
                             android:layout_height="30px"
                             android:layout_marginLeft="28px"
-                            android:src="@drawable/isme_tubiao" />
+                            android:src="@mipmap/weizhi" />
 
                         <TextView
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/color_white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="place" />

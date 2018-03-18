@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/mImg"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="210dp" />
+    <ImageView
+        android:id="@+id/mLike"
+        android:layout_alignRight="@id/mImg"
+        android:layout_alignTop="@id/mImg"
+        android:src="@mipmap/likes"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:id="@+id/mTitle"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/mImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/mHint"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/mTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mPrice"
+        android:layout_alignTop="@id/mTitle"
+        android:layout_alignParentRight="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mInfo"
+        android:layout_below="@id/mTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

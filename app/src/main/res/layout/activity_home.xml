@@ -6,32 +6,36 @@
                 android:clipChildren="false"
                 tools:context="com.silent.fiveghost.tourist.ui.activity.HomeActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_home"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="50dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
+    <View
+        android:id="@+id/mFootView"
+        android:fitsSystemWindows="true"
+        android:background="#000"
         android:layout_alignParentBottom="true"
-        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+    <LinearLayout
+        android:id="@+id/mTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_above="@id/mFootView"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
         android:weightSum="6"
-        android:background="@color/color_light_white">
+        android:background="#FFF">
 
         <RelativeLayout
             android:id="@+id/rl_home"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/img_home_icon"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@mipmap/icon_home_select"/>
 
@@ -48,15 +52,15 @@
 
         <RelativeLayout
             android:id="@+id/rl_feature"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             >
 
             <ImageView
                 android:id="@+id/img_feature_icon"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/select_route"/>
 
@@ -72,31 +76,23 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="50dp"
-            android:layout_weight="2"
-            android:layout_height="70dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
 
-        <ImageView
-            android:id="@+id/img_home_issue"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:background="@mipmap/icon_issue"/>
 
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_order"
-            android:layout_width="50dp"
-            android:layout_weight="1"
-            android:layout_height="50dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/img_order_icon"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/select_order"/>
 
@@ -113,14 +109,14 @@
 
         <RelativeLayout
             android:id="@+id/rl_mine"
-            android:layout_width="50dp"
-            android:layout_weight="1"
-            android:layout_height="50dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/img_mine_icon"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/select_persional"/>
 
@@ -137,5 +133,19 @@
 
     </LinearLayout>
 
-
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_above="@id/mTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <ImageView
+        android:id="@+id/img_home_issue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="65dp"
+        android:background="@mipmap/icon_issue"/>
 </RelativeLayout>
