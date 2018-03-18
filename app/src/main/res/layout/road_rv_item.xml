@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="130px"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="20px"
+    android:paddingRight="20px">
+
+    <TextView
+        android:id="@+id/Road_time_tv"
+        android:layout_width="match_parent"
+        android:layout_height="56px"
+        android:text="01/26周五" />
+
+    <TextView
+        android:id="@+id/Road_price_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="￥3960"
+        android:textColor="@color/color_road_price" />
+</LinearLayout>

@@ -1,6 +1,8 @@
 package com.silent.fiveghost.tourist.ui.fragment;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,10 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.ui.activity.CollectActivity;
 import com.silent.fiveghost.tourist.ui.activity.HelpCenterActivity;
 import com.silent.fiveghost.tourist.ui.activity.SettingActivity;
+import com.silent.fiveghost.tourist.ui.activity.UpDatePersonActivity;
 
 /*
 * 个人中心-----
@@ -32,6 +36,12 @@ public class PersonalFragment extends Fragment {
         View view = inflater.inflate(R.layout.isme, container, false);
         initView(view);
         Glide.with(getContext()).load(R.drawable.isme_imgtitle).into(img_title);
+        Bundle arguments = getArguments();
+        if(arguments!=null){
+            byte[] bitmaps = arguments.getByteArray("bitmap");
+            Bitmap bitmap= BitmapFactory.decodeByteArray(bitmaps, 0, bitmaps.length);
+            img_title.setImageBitmap(bitmap);
+        }
         initonClike();
         return view;
     }
@@ -62,12 +72,10 @@ public class PersonalFragment extends Fragment {
         img_title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(getActivity(), UpDatePersonActivity.class));
             }
         });//头像
     }
-
-
 
 
     private void initView(View view) {

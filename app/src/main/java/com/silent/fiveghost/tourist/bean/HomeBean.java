@@ -45,6 +45,15 @@ public class HomeBean {
         this.data = data;
     }
 
+    @Override
+    public String toString() {
+        return "HomeBean{" +
+                "errcode=" + errcode +
+                ", errmsg='" + errmsg + '\'' +
+                ", data=" + data +
+                '}';
+    }
+
     public static class DataBean {
         private List<AdvertBean> advert;
         private List<RouteBean> route;
@@ -74,6 +83,15 @@ public class HomeBean {
             this.guide = guide;
         }
 
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "advert=" + advert +
+                    ", route=" + route +
+                    ", guide=" + guide +
+                    '}';
+        }
+
         public static class AdvertBean {
             /**
              * img : https://www.baidu.com/img/bd_logo1.png
@@ -98,9 +116,27 @@ public class HomeBean {
             public void setHref(String href) {
                 this.href = href;
             }
+
+            @Override
+            public String toString() {
+                return "AdvertBean{" +
+                        "img='" + img + '\'' +
+                        ", href='" + href + '\'' +
+                        '}';
+            }
         }
 
         public static class RouteBean {
+            @Override
+            public String toString() {
+                return "RouteBean{" +
+                        "rid=" + rid +
+                        ", name='" + name + '\'' +
+                        ", img='" + img + '\'' +
+                        ", desc='" + desc + '\'' +
+                        '}';
+            }
+
             /**
              * rid : 104
              * name : 路线测试1
@@ -146,6 +182,16 @@ public class HomeBean {
         }
 
         public static class GuideBean {
+            @Override
+            public String toString() {
+                return "GuideBean{" +
+                        "gid=" + gid +
+                        ", username='" + username + '\'' +
+                        ", avatar='" + avatar + '\'' +
+                        ", good_line_desc='" + good_line_desc + '\'' +
+                        '}';
+            }
+
             /**
              * gid : 10
              * username : 导游账户

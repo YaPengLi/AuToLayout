@@ -48,7 +48,8 @@
         <activity android:name=".ui.activity.OrderContentActivity" />
         <activity android:name=".ui.activity.IssueActivity" />
         <activity android:name=".ui.activity.IssueOneStepActivity" />
-        <activity android:name=".ui.activity.TabOrderActivity"></activity>
+        <activity android:name=".ui.activity.TabOrderActivity" />
+        <activity android:name=".ui.activity.UpDatePersonActivity"></activity>
     </application>
 
 </manifest>

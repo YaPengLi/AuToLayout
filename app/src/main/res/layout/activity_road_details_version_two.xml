@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--头部-->
+        <RelativeLayout
+            android:background="#f1b7a6"
+            android:layout_width="match_parent"
+            android:layout_height="145px"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:padding="32px"
+                android:scaleType="matrix"
+                android:id="@+id/mRoad_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38px"
+                android:src="@mipmap/top_back_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70px"
+                android:text="路线详情" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!--风景图片-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="700px"
+                    android:layout_height="470px">
+
+                    <ImageView
+                        android:id="@+id/mRoad_Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_launcher" />
+                </android.support.v7.widget.CardView>
+                <!--风景介绍-->
+                <TextView
+                    android:id="@+id/mRoad_Landscape_Introduction"
+                    android:layout_width="700px"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="55px"
+                    android:text="@string/road_name" />
+                <!--成人价格-->
+                <LinearLayout
+                    android:layout_width="700px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mRoad_Adult_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥2000"
+                        android:textColor="@color/color_road_price" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:text="起/人（成人）" />
+                </LinearLayout>
+                <!--儿童价格-->
+                <LinearLayout
+                    android:layout_width="700px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45px"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mRoad_Child_Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥1800"
+                        android:textColor="@color/color_road_price" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8px"
+                        android:text="起/人（儿童）" />
+                </LinearLayout>
+                <!--偏好-->
+                <TextView
+                    android:id="@+id/mRoad_Tourism_Preference"
+                    android:layout_width="700px"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55px"
+                    android:maxLines="1"
+                    android:text="山美水美人美 风景宜人 景色优美 游玩好去处 风景如画" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px"
+                    android:background="@color/color_road_bottom_background"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <!--优惠-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="700px"
+                        android:layout_height="130px"
+                        android:layout_marginTop="30px">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/mRoad_Discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="30px"
+                                android:gravity="center"
+                                android:text="团体超过10人 立减1000元" />
+
+                            <ImageView
+                                android:id="@+id/mRoad_Discount_Details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20px"
+                                android:src="@mipmap/ic_launcher" />
+
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!--日期选择-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="700px"
+                        android:layout_height="130px"
+                        android:layout_marginTop="30px">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/mRoad_Time_Rv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+                                android:id="@+id/mRoad_More_Dates"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:paddingLeft="20px"
+                                android:privateImeOptions="20px"
+                                android:text="更多日期" />
+
+                            <View
+                                android:layout_width="1px"
+                                android:layout_height="77px"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@id/mRoad_More_Dates"
+                                android:background="#d2d2d2" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <!--报名人员and地图-->
+                    <android.support.v7.widget.CardView
+                        android:layout_width="700px"
+                        android:layout_height="368px"
+                        android:layout_marginTop="30px">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mRoad_Map"
+                                android:layout_width="640px"
+                                android:layout_height="150px"
+                                android:layout_marginTop="35px"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                android:layout_width="640px"
+                                android:layout_height="1px"
+                                android:layout_marginTop="35px"
+                                android:background="#d2d2d2" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80px"
+
+                                android:layout_marginBottom="35px"
+                                android:layout_marginTop="30px"
+                                android:orientation="horizontal">
+
+                                <com.silent.fiveghost.tourist.view.RoundImageView
+                                    android:id="@+id/mRoad_PersonIcon_one"
+                                    android:layout_width="80px"
+                                    android:layout_height="80px"
+                                    android:layout_marginLeft="26px"
+                                    android:layout_marginRight="27px"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/ic_launcher"
+                                    app:type="circle" />
+
+                                <com.silent.fiveghost.tourist.view.RoundImageView
+                                    android:id="@+id/mRoad_PersonIcon_two"
+                                    android:layout_width="80px"
+                                    android:layout_height="80px"
+                                    android:layout_marginRight="27px"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/ic_launcher"
+                                    app:type="circle" />
+
+                                <com.silent.fiveghost.tourist.view.RoundImageView
+                                    android:id="@+id/mRoad_PersonIcon_three"
+                                    android:layout_width="80px"
+                                    android:layout_height="80px"
+                                    android:layout_marginRight="27px"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/ic_launcher"
+                                    app:type="circle" />
+
+                                <com.silent.fiveghost.tourist.view.RoundImageView
+                                    android:id="@+id/mRoad_PersonIcon_four"
+                                    android:layout_width="80px"
+                                    android:layout_height="80px"
+                                    android:layout_marginRight="15px"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/ic_launcher"
+                                    app:type="circle" />
+
+                                <TextView
+                                    android:id="@+id/mRoad_Enrolment"
+                                    android:layout_width="180px"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="298人已报名" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="14px"
+                                    android:src="@mipmap/ic_launcher" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="700px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40px">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="27px">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="115px">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="50px"
+                                    android:text="活动评价" />
+
+                                <TextView
+                                    android:id="@+id/mRoad_branch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="27px"
+                                    android:layout_marginTop="34px"
+                                    android:text="分" />
+
+                                <TextView
+                                    android:id="@+id/mRoad_Score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28px"
+                                    android:layout_toLeftOf="@id/mRoad_branch"
+                                    android:text="5.0" />
+                            </RelativeLayout>
+
+                            <include layout="@layout/segmenting_line" />
+
+                            <LinearLayout
+                                android:id="@+id/mRoad_comment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"></LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+    <TextView
+        android:background="#d6d6d6"
+        android:layout_marginBottom="110px"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/mRoad_Online_Service"
+            android:layout_width="135px"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/top_licke"
+            android:gravity="center"
+            android:text="在线客服"
+            android:textColor="@color/color_road_text" />
+
+        <TextView
+            android:id="@+id/mRoad_Chinese_Mainland_Only"
+            android:layout_width="135px"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/top_licke"
+            android:gravity="center"
+            android:text="电话客服"
+            android:textColor="@color/color_road_text" />
+
+        <TextView
+            android:id="@+id/mRoad_Collection"
+            android:layout_width="135px"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/top_licke"
+            android:gravity="center"
+            android:text="收藏"
+            android:textColor="@color/color_road_text" />
+
+        <TextView
+            android:id="@+id/mRoad_Immediately_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1b7a6"
+            android:gravity="center"
+            android:text="立即报名"
+            android:textColor="#fff" />
+    </LinearLayout>
+</RelativeLayout>

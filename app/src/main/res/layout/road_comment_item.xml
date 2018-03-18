@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="155px">
+
+    <com.silent.fiveghost.tourist.view.RoundImageView
+        android:scaleType="fitXY"
+        android:id="@+id/mRoad_comment_persion_icon"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/ic_launcher"
+        app:type="circle" />
+
+    <RelativeLayout
+        android:layout_width="584px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="27px"
+        android:paddingLeft="27px"
+        android:paddingRight="27px">
+
+        <TextView
+            android:id="@+id/mRoad_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="q***0" />
+
+        <TextView
+            android:id="@+id/mRoad_Travel_Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2017-05-06出行" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mRoad_comment_describe"
+        android:layout_width="535px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="25px"
+        android:layout_marginRight="27px"
+        android:text="梦幻旅程 风景如画    风趣幽默梦幻旅程风景如画 风趣幽默" />
+
+    <include
+        layout="@layout/segmenting_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

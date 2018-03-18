@@ -20,6 +20,9 @@
     <color name="color_text_dark">#000000</color>
     <color name="color_button_bg">#ECB2A4</color>
     <color name="color_text_pink">#F289B6</color>
+    <color name="color_road_price">#ff8200</color>
+    <color name="color_road_bottom_background">#f2f5f7</color>
+    <color name="color_road_text">#a3a3a3</color>
     <color name="color_edit_bg">#66C7CAD2</color>
     <color name="color_edit_bg2">#99C7CAD2</color>
 

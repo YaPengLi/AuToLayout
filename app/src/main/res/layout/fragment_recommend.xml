@@ -54,7 +54,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="160dp"/>
 
-                <RelativeLayout
+               <!-- <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp">
@@ -94,14 +94,11 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="15dp">
-
-                    <com.silent.fiveghost.tourist.view.ScrollviewForGridview
-                        android:id="@+id/rv_recommend_impress"
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ImpressionHousekeeper"
                         android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"/>
-                </LinearLayout>
+                        android:layout_height="340px"/>
+                </LinearLayout>-->
 
                 <RelativeLayout
                     android:id="@+id/rl_hot_path_layout"
@@ -144,11 +141,10 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="15dp">
 
-                    <com.silent.fiveghost.tourist.view.ScrollviewForGridview
-                        android:id="@+id/rv_hot_path"
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/HotLine"
                         android:layout_width="match_parent"
-                        android:layout_height="300dp"
-                        />
+                        android:layout_height="340px"/>
                 </LinearLayout>
 
                 <RelativeLayout
