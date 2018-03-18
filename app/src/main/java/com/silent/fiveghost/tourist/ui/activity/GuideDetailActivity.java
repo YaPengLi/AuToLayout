@@ -119,6 +119,7 @@ public class GuideDetailActivity extends BaseActivity {
 			public void defeat(String s) {
 				Log.e("GuideDetailActivity", s);
 			}
+
 		});
 
 		presenter.DoGet(UrlUtils.GUIDE_URL + mToken + "&uid=" + getIntent().getStringExtra("gid"));
