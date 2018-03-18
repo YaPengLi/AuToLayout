@@ -24,7 +24,6 @@ public class FeatureAdapter extends BaseQuickAdapter<FeaturesBean.DataBean.Items
 	private Context mContext;
 
 	public FeatureAdapter(Context context, List<FeaturesBean.DataBean.ItemsBean> data) {
-
 		super(R.layout.feature_item, data);
 		this.mContext = context;
 	}
