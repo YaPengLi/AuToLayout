@@ -149,6 +149,7 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
         tv_money = (TextView) findViewById(R.id.tv_money);
         submit_orders_order = (Button) findViewById(R.id.submit_orders_order);
 
+
         bt_birthday.setOnClickListener(this);
         submit_orders_order.setOnClickListener(this);
     }
