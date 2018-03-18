@@ -192,6 +192,7 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
                 break;
             case R.id.submit_orders_order:
                 submit();
+                //TODO
                 Intent intent = new Intent();
                 String money = tv_money.getText().toString();
                 String starttime = bt_starttime.getText().toString();
