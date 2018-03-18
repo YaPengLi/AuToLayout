@@ -112,6 +112,7 @@ public class GuideDetailActivity extends BaseActivity {
 
 			@Override
 			public void success(GuideDetailBean bean) {
+
 				onSuccess(bean.getData());
 			}
 
