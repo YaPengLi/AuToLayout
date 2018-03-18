@@ -194,8 +194,8 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
                 submit();
                 //TODO
                 Intent intent = new Intent();
-
                 String money = tv_money.getText().toString();
+
                 String starttime = bt_starttime.getText().toString();
                 String endtimes = endtime.getText().toString();
                 String title = tv_title.getText().toString();
