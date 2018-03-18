@@ -61,8 +61,6 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 	TextView tvMineText;
 	@BindView(R.id.rl_mine)
 	RelativeLayout rlMine;
-
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
