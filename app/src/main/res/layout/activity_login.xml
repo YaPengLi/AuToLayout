@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/login_pic_bgx"
+    android:background="@mipmap/login_bg"
     android:orientation="vertical"
     tools:context="com.silent.fiveghost.tourist.ui.activity.LoginActivity">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="750px" />
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="115dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/login_logo"
+        android:layout_marginTop="100dp"/>
 
     <LinearLayout
-        android:layout_width="537px"
-        android:layout_height="94px"
-        android:layout_marginLeft="105px"
-        android:background="#33ffffff">
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@color/color_edit_bg">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="38px"
-            android:layout_marginRight="38px"
-            android:src="@mipmap/icon_user" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/icon_username"/>
 
         <EditText
             android:id="@+id/login_edit_yhm"
@@ -36,26 +41,23 @@
             android:maxLength="11"
             android:singleLine="true"
             android:textColor="#fff"
-            android:textColorHint="#7c7c7e" />
+            android:textColorHint="#7c7c7e"/>
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="25px" />
-
     <LinearLayout
-        android:layout_width="537px"
-        android:layout_height="94px"
-        android:layout_marginLeft="105px"
-        android:background="#33ffffff">
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_edit_bg">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="38px"
-            android:layout_marginRight="38px"
-            android:src="@mipmap/icon_lock" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/icon_password"/>
 
         <EditText
             android:id="@+id/login_edit_mm"
@@ -66,44 +68,43 @@
             android:hint="6位数字或字母"
             android:inputType="textPassword"
             android:textColor="#fff"
-            android:textColorHint="#7c7c7e" />
+            android:textColorHint="#7c7c7e"/>
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="47px" />
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="537px"
-        android:layout_height="95px"
-        android:layout_marginLeft="105px"
-        android:background="@drawable/btn_havecode_normal"
-        android:text="登录" />
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_button_bg"
+        android:text="登录"
+        android:textColor="@color/color_light_white"
+        android:textSize="16sp"/>
 
     <LinearLayout
-        android:layout_width="523px"
-        android:layout_height="53px"
-        android:layout_marginLeft="105px"
-        android:layout_marginTop="125px">
+        android:layout_width="260dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp">
 
         <TextView
             android:id="@+id/login_wangji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="忘记密码？"
-            android:textColor="#7c7c7e" />
+            android:textColor="#7c7c7e"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/login_zhuce"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/zhucexieyi"
-            android:textColor="#7c7c7e" />
+            android:textColor="#7c7c7e"/>
     </LinearLayout>
-</com.zhy.autolayout.AutoLinearLayout>
+</LinearLayout>

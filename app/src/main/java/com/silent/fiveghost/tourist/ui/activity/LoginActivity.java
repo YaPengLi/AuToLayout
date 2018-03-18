@@ -118,7 +118,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 				pop_code.setOnClickListener(this);
 				pop_btn = (Button) view.findViewById(R.id.pop_btn);
 				pop_btn.setOnClickListener(this);
-				popupWindow = new PopupWindow(view, 900, 1400);
+				popupWindow = new PopupWindow(view, 600, 800);
 				//获取焦点
 				popupWindow.setFocusable(true);
 				//window设置背景，如果不设置背景
