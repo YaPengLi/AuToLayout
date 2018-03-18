@@ -126,6 +126,7 @@ public class GuideDetailActivity extends BaseActivity {
 	}
 
 	private void onSuccess(GuideDetailBean.DataBean bean) {
+
 		mPathAdapter = new GuideDetailsPathAdapter(this, bean.getRoute());
 		rvGuideDetailPath.setAdapter(mPathAdapter);
 		rvGuideDetailPath.setHorizontalSpacing(10);
