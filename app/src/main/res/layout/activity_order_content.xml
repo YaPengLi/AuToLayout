@@ -16,7 +16,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="1152px"
                 android:background="#232A34"
@@ -38,18 +37,19 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-
                     android:layout_width="696px"
                     android:layout_height="496px"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="57px"
-                    android:background="@mipmap/iv_big_banner">
+                    android:background="@mipmap/iv_big_banner"
+
+                    >
+
                     <ImageView
                         android:id="@+id/rl_show_big_banner"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@mipmap/iv_big_banner"
-                        />
+                        android:src="@mipmap/iv_big_banner" />
                 </RelativeLayout>
 
                 <LinearLayout
@@ -79,7 +79,7 @@
                         android:src="@mipmap/iv_small_banner" />
 
                     <ImageView
-                        android:id="@+id/iv_for_order_content"
+                        android:id="@+id/iv_four_order_content"
                         android:layout_width="151px"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="32px"
@@ -87,6 +87,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="27px"
@@ -102,17 +103,18 @@
                     android:layout_marginTop="20px">
 
                     <ImageView
+                        android:id="@+id/image_icon"
                         android:layout_width="30px"
                         android:layout_height="30px"
                         android:src="@mipmap/ic_launcher_round" />
 
                     <TextView
+                        android:id="@+id/tv_smalltitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10px"
                         android:text="云南省大理xxxxxxx"
                         android:textColor="#fff" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,7 +122,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal">
 
-                    <Button
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/bt_starttime"
                         android:layout_width="330px"
                         android:layout_height="100px"
                         android:background="#2f353e"
@@ -128,7 +132,9 @@
                         android:textColor="@color/gree"
                         android:textSize="20sp" />
 
-                    <Button
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/endtime"
                         android:layout_width="330px"
                         android:layout_height="100px"
                         android:layout_marginLeft="30px"
@@ -156,7 +162,7 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="689px"
-                    android:layout_height="472px"
+                    android:layout_height="650px"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="35px">
 
@@ -168,8 +174,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="30px"
-                            android:layout_weight="1">
+                            android:layout_marginTop="30px">
 
                             <RelativeLayout
                                 android:layout_width="wrap_content"
@@ -184,6 +189,7 @@
                                     android:text="共计/张" />
 
                                 <TextView
+                                    android:id="@+id/tv_votenumber"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/tv_sum_order_one"
@@ -195,11 +201,12 @@
                             </RelativeLayout>
 
                             <View
-
                                 android:layout_width="3px"
                                 android:layout_height="60px"
                                 android:layout_gravity="center_horizontal"
-                                android:background="#666"></View>
+                                android:background="#666"
+
+                                ></View>
 
                             <RelativeLayout
                                 android:layout_width="wrap_content"
@@ -214,6 +221,7 @@
                                     android:text="总价/元" />
 
                                 <TextView
+                                    android:id="@+id/tv_countprice"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/tv_price_order"
@@ -223,185 +231,198 @@
                                     android:textColor="#000"
                                     android:textSize="20sp" />
                             </RelativeLayout>
+
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30px"
-                            android:layout_weight="1">
+                            android:layout_width="wrap_content"
+                            android:layout_height="85px"
+                            android:layout_marginTop="60px"
+                            android:gravity="center_vertical">
 
-                            <RelativeLayout
+                            <ImageView
+                                android:layout_width="31px"
+                                android:layout_height="31px"
+                                android:layout_marginLeft="43px"
+                                android:src="@mipmap/ic_launcher_round" />
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_count_road2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="共计/张" />
+                                android:layout_marginLeft="38px"
+                                android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_count_road2"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-
-                            <View
-                                android:layout_width="3px"
-                                android:layout_height="60px"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#666"></View>
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_price_road3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="总价/元" />
+                                    android:text="2000"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_price_road3"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
+                                    android:text="成人票/人" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="173px"
+                                android:layout_height="40px"
+                                android:layout_marginLeft="265px"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/image_less"
+                                    android:layout_width="40px"
+                                    android:layout_height="40px"
+                                    android:src="@mipmap/ic_launcher_round" />
+
+                                <TextView
+                                    android:id="@+id/peoplenumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="37px"
+                                    android:text="2"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/image_add"
+                                    android:layout_width="40px"
+                                    android:layout_height="40px"
+                                    android:layout_marginLeft="37px"
+                                    android:src="@mipmap/ic_launcher_round" />
+                            </LinearLayout>
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="630px"
+                            android:layout_height="5px"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginTop="30px"
+                            android:background="#e5e5e5">
+
+                        </View>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30px"
-                            android:layout_weight="1">
+                            android:layout_height="85px"
+                            android:layout_marginTop="40px"
+                            android:gravity="center_vertical">
 
-                            <RelativeLayout
+                            <ImageView
+                                android:layout_width="31px"
+                                android:layout_height="31px"
+                                android:layout_marginLeft="43px"
+                                android:src="@mipmap/ic_launcher_round" />
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_count_road1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="共计/张" />
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38px"
+                                android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_count_road1"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
-
-                            <View
-
-                                android:layout_width="3px"
-                                android:layout_height="60px"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#666"></View>
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_price_road1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="总价/元" />
+                                    android:text="1800"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_price_road1"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
+                                    android:text="儿童票/人" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="173px"
+                                android:layout_height="40px"
+                                android:layout_marginLeft="265px"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/image_childless"
+                                    android:layout_width="40px"
+                                    android:layout_height="40px"
+                                    android:src="@mipmap/ic_launcher_round" />
+
+                                <TextView
+                                    android:id="@+id/tv_numberchild"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="37px"
+                                    android:text="2"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/image_childadd"
+                                    android:layout_width="40px"
+                                    android:layout_height="40px"
+                                    android:layout_marginLeft="37px"
+                                    android:src="@mipmap/ic_launcher_round" />
+                            </LinearLayout>
                         </LinearLayout>
+
+                        <View
+                            android:layout_width="630px"
+                            android:layout_height="5px"
+                            android:layout_marginLeft="30px"
+                            android:layout_marginTop="30px"
+                            android:background="#e5e5e5"></View>
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30px"
-                            android:layout_weight="1">
+                            android:layout_height="84px"
+                            android:layout_marginTop="60px"
+                            android:gravity="center_vertical">
 
-                            <RelativeLayout
+                            <ImageView
+                                android:layout_width="31px"
+                                android:layout_height="31px"
+                                android:layout_marginLeft="43px"
+                                android:src="@mipmap/ic_launcher_round" />
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_count_road"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="共计/张" />
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="38px"
+                                android:orientation="vertical">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_count_road"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
+                                    android:text="1500"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
 
-                            <View
-
-                                android:layout_width="3px"
-                                android:layout_height="60px"
-                                android:layout_gravity="center_horizontal"
-                                android:background="#666"></View>
-
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-
-                                <TextView
-                                    android:id="@+id/tv_price_road"
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="总价/元" />
+                                    android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@id/tv_price_road"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10px"
-                                    android:text="3"
-                                    android:textColor="#000"
-                                    android:textSize="20sp" />
-                            </RelativeLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="团体票/人" />
+
+                                    <TextView
+                                        android:id="@+id/tv_group"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="(10人以上可成团)"
+                                        android:textColor="#fe4e6e" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/image_addpeople"
+                                android:layout_width="42px"
+                                android:layout_height="42px"
+                                android:layout_marginLeft="170px"
+                                android:src="@mipmap/ic_launcher_round" />
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -440,6 +461,7 @@
                                 android:text="出行人姓名" />
 
                             <EditText
+                                android:id="@+id/et_name"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/shape_one"
@@ -459,17 +481,27 @@
                                 android:text="联系电话(用户接收订单信息)" />
 
                             <EditText
+                                android:id="@+id/et_phonenumber"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:background="@drawable/shape_one"
-                                android:hint="请输入您的姓名" />
+                                android:hint="请输入您的电话" />
                         </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_checkrestrictions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30px"
+                            android:text="查看预订限制"
+                            android:textColor="#ff597a" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
                     android:layout_width="689px"
-                    android:layout_height="857px"
+                    android:layout_height="890px"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="40px">
 
@@ -493,17 +525,24 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="58px">
-
-                            <Button
-                                android:layout_width="270px"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="儿童" />
-
-                            <Button
-                                android:layout_width="270px"
-                                android:layout_height="match_parent"
-                                android:text="成人" />
+                            <android.support.design.widget.TabLayout
+                                app:tabMode="fixed"
+                                app:tabIndicatorHeight="0dp"
+                                app:tabGravity="fill"
+                                app:tabSelectedTextColor="#ffffff"
+                                app:tabTextColor="#999999"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">S
+                                <android.support.design.widget.TabItem
+                                    android:text="儿童"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <android.support.design.widget.TabItem
+                                    android:text="成人"
+                                    android:background="#000000"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </android.support.design.widget.TabLayout>
                         </LinearLayout>
 
                         <LinearLayout
@@ -539,14 +578,15 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="生日" />
+                                    android:text="生日"/>
 
-                                <EditText
+                                <Button
+                                    android:id="@+id/bt_birthday"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_marginTop="10px"
                                     android:background="@drawable/shape_one"
-                                    android:hint="请选择" />
+                                    android:hint="请选择  ﹀" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -565,7 +605,9 @@
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:hint="请输入身份证号" />
+                                android:hint="请输入身份证号"
+                                android:inputType="number"
+                                android:maxLength="18" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -583,14 +625,16 @@
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:hint="请输入电话号" />
+                                android:hint="请输入电话号"
+                                android:inputType="number"
+                                android:maxLength="11" />
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="540px"
                             android:layout_height="116px"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="40px"
+                            android:layout_marginTop="30px"
                             android:orientation="vertical">
 
                             <TextView
@@ -599,8 +643,9 @@
                                 android:text="备注信息" />
 
                             <EditText
+                                android:id="@+id/et_addcontent"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
+                                android:layout_height="wrap_content"
                                 android:hint="(内容补充。XX字以内)" />
                         </LinearLayout>
                     </LinearLayout>
@@ -629,11 +674,12 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-
                     android:layout_width="match_parent"
                     android:layout_height="131px"
                     android:layout_marginTop="300px"
-                    android:background="#000">
+                    android:background="#ffffff"
+
+                    >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -651,43 +697,47 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="成人"
-                                android:textColor="#fff" />
+                                android:textColor="#8a8a8d" />
 
                             <TextView
+                                android:id="@+id/tv_adultnumber"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="1，"
-                                android:textColor="#fff" />
+                                android:textColor="#8a8a8d" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="儿童"
-                                android:textColor="#fff" />
+                                android:textColor="#8a8a8d" />
 
                             <TextView
+                                android:id="@+id/tv_childnumber"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="3"
-                                android:textColor="#fff" />
+                                android:textColor="#8a8a8d" />
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/tv_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="14px"
-                            android:text="￥5600" />
+                            android:text="￥5600"
+                            android:textColor="#333333" />
                     </LinearLayout>
 
                     <Button
                         android:id="@+id/submit_orders_order"
-                        android:layout_width="240px"
-                        android:layout_height="80px"
+                        android:layout_width="290px"
+                        android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="30px"
-                        android:background="#19EFC3"
-                        android:text="提交订单" />
+                        android:background="#fe9200"
+                        android:text="提交订单"
+                        android:textColor="#ffffff" />
                 </RelativeLayout>
             </LinearLayout>
 

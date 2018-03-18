@@ -35,7 +35,6 @@
         <activity android:name=".ui.activity.MessageActivity" />
         <activity android:name=".ui.activity.GuideStyleActivity" />
         <activity android:name=".ui.activity.GuideDetailActivity" />
-        <activity android:name=".ui.activity.RoadDetailsActivity" />
         <activity android:name=".ui.activity.SettingActivity" />
         <activity android:name=".ui.activity.PhoneActivity" />
         <activity android:name=".ui.activity.PasswordActivity" />
@@ -45,11 +44,12 @@
         <activity android:name=".ui.activity.InvoicingActivity" />
         <activity android:name=".ui.activity.CollectActivity" />
         <activity android:name=".ui.activity.OrderDetailsActivity" />
-        <activity android:name=".ui.activity.OrderContentActivity" />
+        <activity android:name=".ui.activity.OrderContentActivity" >
+
+        </activity>
         <activity android:name=".ui.activity.IssueActivity" />
         <activity android:name=".ui.activity.IssueOneStepActivity" />
-        <activity android:name=".ui.activity.TabOrderActivity" />
-        <activity android:name=".ui.activity.UpDatePersonActivity"></activity>
+        <activity android:name=".ui.activity.TabOrderActivity"></activity>
     </application>
 
 </manifest>

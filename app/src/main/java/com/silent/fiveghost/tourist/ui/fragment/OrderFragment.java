@@ -58,6 +58,7 @@ public class OrderFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.rl_one_order:
+
                 break;
             case R.id.rl_two_order:
                 break;

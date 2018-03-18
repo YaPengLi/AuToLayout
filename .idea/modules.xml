@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AuToLayout.iml" filepath="$PROJECT_DIR$/.idea/AuToLayout.iml" />
       <module fileurl="file://E:\Android\youkeduan\AuToLayout\AuToLayout.iml" filepath="E:\Android\youkeduan\AuToLayout\AuToLayout.iml" />
+      <module fileurl="file://D:\AndroidBigWorking\AuToLayout\AuToLayout.iml" filepath="D:\AndroidBigWorking\AuToLayout\AuToLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>

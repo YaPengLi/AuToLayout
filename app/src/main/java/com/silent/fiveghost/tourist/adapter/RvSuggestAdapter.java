@@ -2,7 +2,6 @@ package com.silent.fiveghost.tourist.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -19,7 +18,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.silent.fiveghost.tourist.bean.HomeBean;
 import com.silent.fiveghost.tourist.ui.activity.GuideStyleActivity;
-import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -115,7 +113,6 @@ RvSuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ((ThreeViewHolder) holder).cv_one.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    context.startActivity(new Intent(context, RoadDetailsActivity.class));
                 }
             });
         } else if (holder instanceof ForViewHolder) {
