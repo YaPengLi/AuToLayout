@@ -74,17 +74,6 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_content);
         initView();
-        IPresenter iPresenter = new IPresenter(this);
-        HashMap<String, String> params = new HashMap<>();
-        params.put("access_token","_za8e8fMg-ueDPbvVeZCBDWrFCrabPa-");
-        params.put("rid","");
-        int peopleNumber = getPeopleNumber();
-        params.put("number",peopleNumber+"");
-        params.put("age_group","2");
-        params.put("documents",getDocuments());
-        params.put("contacts",et_name.getText().toString());
-        params.put("contacts_tel",et_phonenumber.getText().toString());
-        iPresenter.DoRequest("http://120.79.137.110:83/api/v1/order/sign-up",params);
     }
     private String getDocuments() {
         String result = "";
@@ -133,23 +122,16 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
         image_less = (ImageView) findViewById(R.id.image_less);
         peoplenumber = (TextView) findViewById(R.id.peoplenumber);
         image_add = (ImageView) findViewById(R.id.image_add);
-        image_childless = (ImageView) findViewById(R.id.image_childless);
-        tv_numberchild = (TextView) findViewById(R.id.tv_numberchild);
-        image_childadd = (ImageView) findViewById(R.id.image_childadd);
-        tv_group = (TextView) findViewById(R.id.tv_group);
-        image_addpeople = (ImageView) findViewById(R.id.image_addpeople);
         et_name = (EditText) findViewById(R.id.et_name);
         et_phonenumber = (EditText) findViewById(R.id.et_phonenumber);
         tv_checkrestrictions = (TextView) findViewById(R.id.tv_checkrestrictions);
         bt_birthday = (Button) findViewById(R.id.bt_birthday);
         et_addcontent = (EditText) findViewById(R.id.et_addcontent);
         iv_add_order = (ImageView) findViewById(R.id.iv_add_order);
-        tv_adultnumber = (TextView) findViewById(R.id.tv_adultnumber);
-        tv_childnumber = (TextView) findViewById(R.id.tv_childnumber);
         tv_money = (TextView) findViewById(R.id.tv_money);
         submit_orders_order = (Button) findViewById(R.id.submit_orders_order);
-        bt_birthday.setOnClickListener(this);
-        submit_orders_order.setOnClickListener(this);
+//        bt_birthday.setOnClickListener(this);
+//        submit_orders_order.setOnClickListener(this);
     }
 
     @Override

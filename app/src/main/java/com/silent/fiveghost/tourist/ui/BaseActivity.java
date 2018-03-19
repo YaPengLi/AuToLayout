@@ -13,8 +13,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.silent.fiveghost.tourist.R;
@@ -70,8 +72,10 @@ public abstract class BaseActivity extends AutoLayoutActivity {
             if(mFootView!=null)
             mFootView.setVisibility(View.VISIBLE);
         }else{
-            if(mFootView!=null)
-            mFootView.setVisibility(View.GONE);
+            if(mFootView!=null) {
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,0);
+                mFootView.setLayoutParams(params);
+            }
         }
     }
 
