@@ -17,12 +17,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.silent.fiveghost.tourist.R;
 import com.silent.fiveghost.tourist.adapter.FeatureAdapter;
 import com.silent.fiveghost.tourist.bean.FeaturesBean;
 import com.silent.fiveghost.tourist.bean.HomeBean;
 import com.silent.fiveghost.tourist.presenter.IPresenter;
+import com.silent.fiveghost.tourist.ui.activity.HomeActivity;
 import com.silent.fiveghost.tourist.ui.activity.LoginActivity;
+import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.silent.fiveghost.tourist.utils.Constant;
 import com.silent.fiveghost.tourist.utils.UrlUtils;
 import com.silent.fiveghost.tourist.view.IView;
@@ -115,8 +118,16 @@ public class FeaturesFragment extends Fragment implements SwipeRefreshLayout.OnR
 		presenter.DoGet(UrlUtils.ROUTE_URL + mToken);
 	}
 
-	private void onSuccess(FeaturesBean bean) {
-		rvShtick.setAdapter(new FeatureAdapter(getActivity(), bean.getData().getItems()));
+	private void onSuccess(final FeaturesBean bean) {
+        FeatureAdapter featureAdapter = new FeatureAdapter(getActivity(), bean.getData().getItems());
+        featureAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                ((HomeActivity) getActivity()).startActivity(RoadDetailsActivity.class);
+            }
+        });
+        rvShtick.setAdapter(featureAdapter);
 	}
 
 

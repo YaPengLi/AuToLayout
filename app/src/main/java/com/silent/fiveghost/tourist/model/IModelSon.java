@@ -1,5 +1,7 @@
 package com.silent.fiveghost.tourist.model;
 
+import android.util.Log;
+
 import com.silent.fiveghost.tourist.http.ApiService;
 import com.silent.fiveghost.tourist.http.MyRetrofit;
 import com.google.gson.Gson;
@@ -46,6 +48,7 @@ public class IModelSon implements IModel {
 
                         try {
                             String string = responseBody.string();
+                            Log.e("TAG",string);
                             Type[] genericInterfaces = callBack.getClass().getGenericInterfaces();
                             Type[] actualTypeArguments = ((ParameterizedType) genericInterfaces[0]).getActualTypeArguments();
                             Type actualTypeArgument = actualTypeArguments[0];

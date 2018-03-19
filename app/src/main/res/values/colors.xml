@@ -5,6 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="dodgerblue">#1e90ff</color><!--闪兰色 -->
     <color name="gray">#808080</color><!--灰色 -->
+    <color name="gray2">#f3f3f3</color><!--灰色 -->
     <color name="gree">#00c998</color>
     <color name="hui">#8b8c8e</color>
     <color name="check">#00cd98</color>

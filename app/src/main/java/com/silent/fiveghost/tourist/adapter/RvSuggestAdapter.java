@@ -20,6 +20,7 @@ import com.silent.fiveghost.tourist.bean.HomeBean;
 import com.silent.fiveghost.tourist.ui.activity.GuideStyleActivity;
 import com.recker.flybanner.FlyBanner;
 import com.silent.fiveghost.tourist.R;
+import com.silent.fiveghost.tourist.ui.activity.RoadDetailsActivity;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
@@ -113,6 +114,7 @@ RvSuggestAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             ((ThreeViewHolder) holder).cv_one.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    context.startActivity(new Intent(context, RoadDetailsActivity.class));
                 }
             });
         } else if (holder instanceof ForViewHolder) {

@@ -1,5 +1,6 @@
 package com.silent.fiveghost.tourist.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,11 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.silent.fiveghost.tourist.R;
+import com.silent.fiveghost.tourist.bean.TabEntity;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -58,14 +64,27 @@ public class OrderFragment extends Fragment implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.rl_one_order:
-
+                gotoPublished("1","已发布订单");
                 break;
             case R.id.rl_two_order:
+                gotoPublished("2","已报名订单");
                 break;
             case R.id.rl_three_order:
+                gotoPublished("3","抢单订单");
                 break;
             case R.id.rl_for_order:
+                gotoPublished("4","我的订单");
                 break;
         }
+    }
+    public void gotoPublished(String type,String title){
+        List<TabEntity> mList = new ArrayList<>();
+        mList.add(new TabEntity("未开始",type,"1"));
+        mList.add(new TabEntity("进行中",type,"2"));
+        mList.add(new TabEntity("未开始",type,"3"));
+        Intent intent = new Intent(getContext(), PublishedOrderFragment.class);
+        intent.putExtra("tabs", (Serializable) mList);
+        intent.putExtra("title", title);
+        startActivity(intent);
     }
 }

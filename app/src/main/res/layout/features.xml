@@ -10,7 +10,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_light_white"
@@ -22,6 +22,7 @@
         TabLayout没有添加，所以停留在顶部
         -->
         <RelativeLayout
+            android:id="@+id/mSeacherLayout"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:background="@color/color_button_bg"
@@ -49,6 +50,7 @@
 
         <LinearLayout
             android:id="@+id/tab_shtick"
+            android:layout_below="@id/mSeacherLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@color/color_dark_white"
@@ -150,6 +152,7 @@
 
 
         <RelativeLayout
+            android:layout_below="@id/tab_shtick"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -166,5 +169,5 @@
             </android.support.v4.widget.SwipeRefreshLayout>
 
         </RelativeLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>

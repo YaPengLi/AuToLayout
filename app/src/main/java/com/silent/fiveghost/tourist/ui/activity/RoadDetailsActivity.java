@@ -1,6 +1,7 @@
 
 package com.silent.fiveghost.tourist.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -180,7 +181,7 @@ public class RoadDetailsActivity extends BaseActivity implements View.OnClickLis
                 break;
             case R.id.mRoad_Immediately_sign_up:
 //                TODO 立即报名
-//                startActivity();
+                startActivity(new Intent(RoadDetailsActivity.this,OrderContentActivity.class));
                 break;
         }
     }

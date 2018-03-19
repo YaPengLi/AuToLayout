@@ -12,7 +12,6 @@ public interface UrlUtils {
 	String HOME_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/home/tourist-index?&order_id= 2018022295140111&access_token=";
 	String ROUTE_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/route/hot-route?access_token=";
 	String GUIDE_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/guide/guide-info?access_token=";
-
-
-
+	String GUIDE_ORDER_URL = HTTP_XNXZ_SERVER_APP + "/api/v1/order/tourist-order-info?access_token=";
+	String ORDER_LIST = HTTP_XNXZ_SERVER_APP+"/api/v1/order/tourist-order-list?access_token=";
 }
