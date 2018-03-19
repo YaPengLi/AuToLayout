@@ -28,7 +28,7 @@
             android:layout_marginTop="70px"
             android:text="路线详情" />
     </RelativeLayout>
-    <View
+    <TextView
         android:id="@+id/mFootView"
         android:background="#000"
         android:layout_alignParentBottom="true"

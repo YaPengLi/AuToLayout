@@ -1,10 +1,18 @@
 package com.silent.fiveghost.tourist.ui;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.silent.fiveghost.tourist.R;
+
+import java.lang.reflect.Method;
 
 /**
  * Created by Administrator on 2017/10/18.
@@ -125,7 +133,43 @@ public abstract class BaseFragment2 extends Fragment {
         }
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        TextView mFootView = getView().findViewById(R.id.mFootView);
+        if(checkDeviceHasNavigationBar(getContext())){
+            if(mFootView!=null)
+                mFootView.setVisibility(View.VISIBLE);
+        }else{
+            if(mFootView!=null) {
+               mFootView.setHeight(0);
+                mFootView.invalidate();
+            }
+        }
+    }
+    //获取是否存在NavigationBar
+    public static boolean checkDeviceHasNavigationBar(Context context) {
+        boolean hasNavigationBar = false;
+        Resources rs = context.getResources();
+        int id = rs.getIdentifier("config_showNavigationBar", "bool", "android");
+        if (id > 0) {
+            hasNavigationBar = rs.getBoolean(id);
+        }
+        try {
+            Class systemPropertiesClass = Class.forName("android.os.SystemProperties");
+            Method m = systemPropertiesClass.getMethod("get", String.class);
+            String navBarOverride = (String) m.invoke(systemPropertiesClass, "qemu.hw.mainkeys");
+            if ("1".equals(navBarOverride)) {
+                hasNavigationBar = false;
+            } else if ("0".equals(navBarOverride)) {
+                hasNavigationBar = true;
+            }
+        } catch (Exception e) {
 
+        }
+        return hasNavigationBar;
+
+    }
     /**
      * [简化Toast]
      *

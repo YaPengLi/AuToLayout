@@ -6,7 +6,7 @@
     android:background="@color/color_dark_white"
     android:orientation="vertical"
     android:scrollbars="none">
-    <View
+    <TextView
         android:id="@+id/mFootView"
         android:background="#000"
         android:layout_alignParentBottom="true"

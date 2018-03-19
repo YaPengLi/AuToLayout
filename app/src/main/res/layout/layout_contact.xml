@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:segmentedgroup="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -45,9 +45,10 @@
                     android:id="@+id/radioButtonOne"
                     style="@style/RadioButton"
                     android:layout_width="0dp"
+                    android:checked="true"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="案例展示" />
+                    android:text="儿  童" />
 
                 <RadioButton
                     android:id="@+id/radioButtonTwo"
@@ -55,7 +56,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="导师风采" />
+                    android:text="成  人" />
             </info.hoang8f.android.segmented.SegmentedGroup>
 
             <LinearLayout
@@ -78,6 +79,7 @@
                         android:text="姓名" />
 
                     <EditText
+                        android:id="@+id/mName"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
@@ -99,13 +101,16 @@
                         android:layout_height="wrap_content"
                         android:text="生日"/>
 
-                    <Button
-                        android:id="@+id/bt_birthday"
+
+                    <EditText
+                        android:id="@+id/mBirthday"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:textSize="@dimen/sp_12"
                         android:background="@drawable/shape_one"
-                        android:hint="请选择  ﹀" />
+                        android:hint="2018-03-20" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -122,6 +127,7 @@
                     android:text="身份证号" />
 
                 <EditText
+                    android:id="@+id/mID"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="请输入身份证号"
@@ -146,6 +152,7 @@
                     android:text="联系电话(用户接收订单信息)" />
 
                 <EditText
+                    android:id="@+id/mPhone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="请输入电话号"
@@ -170,7 +177,7 @@
                     android:text="备注信息" />
 
                 <EditText
-                    android:id="@+id/et_addcontent"
+                    android:id="@+id/mRemarks"
                     android:layout_width="match_parent"
                     android:minHeight="@dimen/dp_40"
                     android:textSize="@dimen/sp_12"
@@ -182,4 +189,4 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-</merge>
+</LinearLayout>

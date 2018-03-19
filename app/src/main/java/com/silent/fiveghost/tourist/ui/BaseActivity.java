@@ -17,6 +17,7 @@ import android.view.ViewParent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.silent.fiveghost.tourist.R;
@@ -67,14 +68,14 @@ public abstract class BaseActivity extends AutoLayoutActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        View mFootView = findViewById(R.id.mFootView);
+        TextView mFootView = findViewById(R.id.mFootView);
         if(checkDeviceHasNavigationBar(this)){
             if(mFootView!=null)
-            mFootView.setVisibility(View.VISIBLE);
+                mFootView.setVisibility(View.VISIBLE);
         }else{
             if(mFootView!=null) {
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,0);
-                mFootView.setLayoutParams(params);
+                mFootView.setHeight(0);
+                mFootView.invalidate();
             }
         }
     }
