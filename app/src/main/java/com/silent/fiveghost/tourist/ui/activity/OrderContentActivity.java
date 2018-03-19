@@ -34,7 +34,7 @@ import cn.qqtheme.framework.util.ConvertUtils;
 public class OrderContentActivity extends BaseActivity implements View.OnClickListener, IView<Ordercontent>{
 
 
-    private RelativeLayout rl_top_order_content;
+//    private RelativeLayout rl_top_order_content;
     private ImageView rl_show_big_banner;
     private ImageView iv_one_order_content;
     private ImageView iv_two_order_content;
@@ -115,7 +115,7 @@ public class OrderContentActivity extends BaseActivity implements View.OnClickLi
 
 
     private void initView() {
-        rl_top_order_content = (RelativeLayout) findViewById(R.id.rl_top_order_content);
+//        rl_top_order_content = (RelativeLayout) findViewById(R.id.rl_top_order_content);
         rl_show_big_banner = (ImageView) findViewById(R.id.rl_show_big_banner);
         iv_one_order_content = (ImageView) findViewById(R.id.iv_one_order_content);
         iv_two_order_content = (ImageView) findViewById(R.id.iv_two_order_content);

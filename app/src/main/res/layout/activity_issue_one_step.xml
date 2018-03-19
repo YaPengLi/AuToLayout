@@ -44,32 +44,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_margin="5dp"
-                        android:background="@mipmap/temp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:background="@mipmap/temp"/>
 
                     <ImageView
                         android:id="@+id/img2"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_margin="5dp"
-                        android:background="@mipmap/temp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:background="@mipmap/temp"/>
 
                     <ImageView
                         android:id="@+id/img3"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_margin="5dp"
-                        android:background="@mipmap/temp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:background="@mipmap/temp"/>
 
                     <ImageView
                         android:id="@+id/img4"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_margin="5dp"
-                        android:background="@mipmap/temp"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:background="@mipmap/temp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -94,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="20dp"
-                            android:text="2018-01-01"
+                            android:text="开始时间"
                             android:textColor="@color/color_button_bg"
                             android:textSize="16sp"
                             />
@@ -169,37 +169,48 @@
                         android:textColor="@color/color_text_dark"
                         android:textSize="16sp"/>
 
-                    <ImageView
+                    <RelativeLayout
                         android:id="@+id/img_issue_one_step_man_add"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
-                        android:background="@mipmap/icon_add_select"
-                        />
+                        android:layout_marginRight="10dp">
 
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/icon_add_select"
+                            />
+                    </RelativeLayout>
 
                     <TextView
                         android:id="@+id/tv_issue_one_step_man_count_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/img_issue_one_step_man_add"
                         android:text="1"/>
 
 
-                    <ImageView
+                    <RelativeLayout
                         android:id="@+id/img_issue_one_step_man_subtract"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/tv_issue_one_step_man_count_text"
-                        android:background="@mipmap/icon_subtract_select"
-                        />
+                        >
 
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/icon_subtract_select"
+                            />
+                    </RelativeLayout>
                 </RelativeLayout>
 
                 <View
@@ -223,15 +234,22 @@
                         android:textColor="@color/color_text_dark"
                         android:textSize="16sp"/>
 
-                    <ImageView
+                    <RelativeLayout
                         android:id="@+id/img_issue_one_step_day_add"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
-                        android:background="@mipmap/icon_add_select"
-                        />
+                        >
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/icon_add_select"
+                            />
+                    </RelativeLayout>
 
 
                     <TextView
@@ -239,20 +257,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/img_issue_one_step_day_add"
                         android:text="1"/>
 
-
-                    <ImageView
+                    <RelativeLayout
                         android:id="@+id/img_issue_one_step_day_subtract"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="20dp"
+                        android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/tv_issue_one_step_day_count_text"
-                        android:background="@mipmap/icon_subtract_select"
-                        />
+                        >
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerInParent="true"
+                            android:background="@mipmap/icon_subtract_select"
+                            />
+                    </RelativeLayout>
 
                 </RelativeLayout>
             </LinearLayout>
@@ -277,6 +301,7 @@
                     />
 
                 <EditText
+                    android:id="@+id/et_info_preference"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -307,7 +332,7 @@
                     android:lines="2"/>
             </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
+            <ListView
                 android:id="@+id/rv_issue_one_step_info_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -316,6 +341,172 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/color_light_white"
                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@color/color_light_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="出行人信息"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="14sp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="儿童"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="成人"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="姓名"/>
+
+                            <EditText
+                                android:id="@+id/et_info_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/color_dark_white"
+                                android:hint="请输入姓名"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="生日"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_info_birthday"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_below="@id/ll_issue_tab"
+                                android:layout_weight="1"
+                                android:background="@color/color_dark_white">
+
+                                <TextView
+                                    android:id="@+id/tv_info_birthday"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="请选择"
+                                    android:textColor="@color/color_text_default"
+                                    android:textSize="16sp"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="12dp"
+                                    android:layout_height="6dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@mipmap/icon_down_arrow"/>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="身份证号"
+                        android:textColor="@color/color_text_default"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_info_id_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_dark_white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="联系电话"
+                        android:textColor="@color/color_text_default"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_info_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/color_dark_white"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="备注"
+                        android:textColor="@color/color_text_default"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/et_info_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/img_issue_one_step_add_people"
@@ -337,8 +528,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/color_light_white"
                 android:orientation="vertical">
 
@@ -363,6 +554,7 @@
                     />
 
                 <EditText
+                    android:id="@+id/et_issue_one_step_contacts"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginLeft="30dp"
@@ -384,6 +576,7 @@
                     />
 
                 <EditText
+                    android:id="@+id/et_issue_one_step_contacts_phone"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="20dp"
@@ -395,6 +588,16 @@
                     />
 
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_issue_one_step_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_button_bg"
+                android:text="确认发布"
+                android:textColor="@color/color_light_white"
+                android:textSize="16sp"
+                />
         </LinearLayout>
     </com.silent.fiveghost.tourist.view.MyNestedScrollView>
 </LinearLayout>
