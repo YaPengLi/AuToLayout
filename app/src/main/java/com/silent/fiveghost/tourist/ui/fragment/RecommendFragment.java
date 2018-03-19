@@ -147,7 +147,7 @@ public class RecommendFragment extends BaseFragment implements View.OnClickListe
 				Log.e("HomeActivity", s);
 			}
 		});
-		presenter.DoGet(UrlUtils.ONE_STEP_URL + mToken);
+		presenter.DoGet(UrlUtils.HOME_URL + mToken);
 	}
 
 	//请求成功后数据渲染

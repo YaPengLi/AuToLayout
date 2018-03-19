@@ -10,12 +10,12 @@ public class PersonBean implements Serializable{
     private int type;
     private String username;
     private String birthday;
-    private int number;
+    private String number;
     private String remarks;
     public PersonBean() {
     }
 
-    public PersonBean(int type, String username, String birthday, int number, String remarks) {
+    public PersonBean(int type, String username, String birthday, String number, String remarks) {
         this.type = type;
         this.username = username;
         this.birthday = birthday;
@@ -47,11 +47,11 @@ public class PersonBean implements Serializable{
         this.birthday = birthday;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 

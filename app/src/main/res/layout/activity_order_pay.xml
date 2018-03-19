@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dark_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_all"/>
+
+    <com.silent.fiveghost.tourist.view.MyNestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/color_light_white">
+
+                <ImageView
+                    android:id="@+id/img_order_pay_img"
+                    android:layout_width="60dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@mipmap/login_logo"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/img_order_pay_img">
+
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥3800"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="向内行走"
+                        android:textColor="@color/color_text_default"
+                        android:textSize="16sp"
+                        />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/color_button_bg"
+                        android:text="签订合同"
+                        android:textColor="@color/color_light_white"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="出行信息"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_light_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_trip_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:text="2018-02-24 至 2018-03-01"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <include layout="@layout/cut_off_line_gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_order_pay_man_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="成人：1人"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_order_pay_child_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/tv_order_pay_man_count"
+                            android:text="儿童：1人"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="18sp"/>
+
+                    </RelativeLayout>
+
+                    <include layout="@layout/cut_off_line_gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/tv_order_pay_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:gravity="center_vertical"
+                            android:text="云南5日游"
+                            android:textColor="@color/color_text_dark"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_order_pay_info_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center_vertical"
+                            android:text="¥3800"
+                            android:textColor="@color/color_button_bg"
+                            android:textSize="22sp"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="联系人信息"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_light_white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_contact_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="姓名:刘鹏"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_contact_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="手机号:13521447584"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <include layout="@layout/cut_off_line_gray"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_contact_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="订单号:1011575684838"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_contact_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="报名时间:2018-03-20"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="出行人信息"
+                    android:textColor="@color/color_text_dark"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_light_white"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_trip_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="姓名:刘鹏"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_trip_card_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="身份证号:230203198810011xxxx"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <include layout="@layout/cut_off_line_gray"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_trip_name2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="姓名:刘鹏"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_trip_card_id2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="身份证号:230203198810011xxxx"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"
+                        />
+
+                    <include layout="@layout/cut_off_line_gray"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="备注："
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_order_pay_info_trip_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="没什么好说的"
+                        android:textColor="@color/color_text_dark"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_order_pay_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="240dp"
+                android:background="@color/color_button_bg"
+                android:text="确认支付¥3800"
+                android:textColor="@color/color_light_white"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </com.silent.fiveghost.tourist.view.MyNestedScrollView>
+</LinearLayout>

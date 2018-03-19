@@ -52,6 +52,7 @@
         <activity android:name=".ui.activity.IssueOneStepActivity"/>
         <activity android:name=".ui.activity.TabOrderActivity"/>
         <activity android:name=".ui.fragment.PublishedOrderFragment"/>
+        <activity android:name=".ui.activity.OrderPayActivity"/>
     </application>
 
 </manifest>
